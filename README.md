@@ -151,6 +151,7 @@ python backend.py
 ```
 
 Open **http://127.0.0.1:8000**
+Render server : https://agentic-ai-ca3.onrender.com/
 
 | Login | Password | Sees |
 |---|---|---|
