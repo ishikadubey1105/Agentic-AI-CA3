@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AttendX · Attendance ERP</title>
+<!-- every library is vendored in ./vendor so the app also runs with no internet -->
+<script src="vendor/tailwind.js"></script>
+<script src="vendor/react.js"></script>
+<script src="vendor/react-dom.js"></script>
+<script src="vendor/babel.js"></script>
+<script src="vendor/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style type="text/tailwindcss">
+  /* the palette lives in CSS variables so the same class names work in both
+     themes - tailwind just points at the variables */
+  @theme {
+    --color-ink:    var(--c-bg);
+    --color-panel:  var(--c-panel);
+    --color-panel2: var(--c-panel2);
+    --color-line:   var(--c-line);
+    --color-txt:    var(--c-txt);
+    --color-muted:  var(--c-muted);
+    --color-cy:     var(--c-accent);
+    --color-vi:     var(--c-alt);
+    --color-gr:     var(--c-ok);
+    --color-am:     var(--c-warn);
+    --color-rd:     var(--c-bad);
+    --font-sans: Inter, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+</style>
+<style>
+  /* dark: warm charcoal, desaturated accents - not neon */
+  :root, :root[data-theme="dark"] {
+    --c-bg:#14161a; --c-panel:#1c1f25; --c-panel2:#23262d; --c-line:#2f333b;
+    --c-txt:#e3e4e7; --c-muted:#969ba5;
+    --c-accent:#6fa79d;  --c-alt:#9a92c9;  --c-ok:#7faa84;
+    --c-warn:#c9a267;    --c-bad:#c28585;
+    --c-code-bg:#1a1d22; --c-code-txt:#a8bdb5;
+    --c-shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+  /* light: warm paper, deeper accents so contrast stays honest */
+  :root[data-theme="light"] {
+    --c-bg:#f6f5f2; --c-panel:#ffffff; --c-panel2:#f1efea; --c-line:#e2dfd8;
+    --c-txt:#2b2d31; --c-muted:#6d727a;
+    --c-accent:#3d7d73;  --c-alt:#635796;  --c-ok:#4a7c55;
+    --c-warn:#9a6f22;    --c-bad:#a45a5a;
+    --c-code-bg:#f5f3ee; --c-code-txt:#3f5a52;
+    --c-shadow:0 1px 2px rgba(31,28,22,.06);
+  }
+  html,body,#root{height:100%}
+  body{background:var(--c-bg);color:var(--c-txt);
+       font-family:Inter,system-ui,sans-serif;
+       transition:background .25s ease, color .25s ease}
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-thumb{background:var(--c-line);border-radius:99px}
+  ::-webkit-scrollbar-track{background:transparent}
+  .soft{box-shadow:var(--c-shadow)}
+  .fadein{animation:f .3s ease}
+  @keyframes f{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+  .codebox{background:var(--c-code-bg);color:var(--c-code-txt)}
+  :focus-visible{outline:2px solid var(--c-accent);outline-offset:2px;border-radius:8px}
+  input[type=range],input[type=checkbox]{accent-color:var(--c-accent)}
+  input[type=date]{color-scheme:var(--c-scheme,dark)}
+  :root[data-theme="light"] input[type=date]{color-scheme:light}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const {useState, useEffect, useRef, useCallback} = React;
+
+/* ------------------------------------------------------------------ */
+/*  tiny api client                                                    */
+/* ------------------------------------------------------------------ */
+const TOKEN_KEY = 'attendx_token';
+let TOKEN = localStorage.getItem(TOKEN_KEY) || '';
+
+async function api(path, {method='GET', body, raw} = {}) {
+  const res = await fetch('/api' + path, {
+    method,
+    headers: {'Content-Type':'application/json', 'Authorization':'Bearer ' + TOKEN},
+    body: body ? JSON.stringify(body) : undefined
+  });
+  if (res.status === 401) { TOKEN=''; localStorage.removeItem(TOKEN_KEY); window.location.reload(); }
+  if (!res.ok) { const e = await res.json().catch(()=>({detail:res.statusText})); throw new Error(e.detail || 'request failed'); }
+  return raw ? res : res.json();
+}
+
+/* ------------------------------------------------------------------ */
+/*  small shared bits                                                  */
+/* ------------------------------------------------------------------ */
+const Icon = ({d, cls='w-[18px] h-[18px]'}) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"
+       strokeLinecap="round" strokeLinejoin="round" className={cls}><path d={d}/></svg>
+);
+const I = {
+  dash:'M3 13h8V3H3v10zm10 8h8V3h-8v18zM3 21h8v-6H3v6z',
+  mark:'M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11',
+  people:'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 100 8 4 4 0 000-8zm14 14v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75',
+  book:'M4 19.5A2.5 2.5 0 016.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z',
+  bot:'M12 8V4H8m4 4h4a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2v-8a2 2 0 012-2h4zM2 14h2m16 0h2M9 14h.01M15 14h.01',
+  mail:'M4 4h16v16H4zM22 6l-10 7L2 6',
+  file:'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zM14 2v6h6M16 13H8m8 4H8',
+  log:'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+  term:'M4 17l6-6-6-6m8 14h8',
+  net:'M12 3a3 3 0 110 6 3 3 0 010-6zM5 15a3 3 0 110 6 3 3 0 010-6zm14 0a3 3 0 110 6 3 3 0 010-6zM12 9v3m0 0H6.5m5.5 0h5.5m-11 0v3m11-3v3',
+  shield:'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4',
+  menu:'M4 6h16M4 12h16M4 18h16',
+  out:'M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4m7 14l5-5-5-5m5 5H9',
+  alert:'M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z',
+};
+
+const Card = ({children, cls=''}) =>
+  <div className={'bg-panel border border-line rounded-2xl ' + cls}>{children}</div>;
+
+const Label = ({children}) =>
+  <div className="font-mono text-[10px] tracking-[1.6px] uppercase text-muted mb-3">{children}</div>;
+
+const Pill = ({tone='cy', children}) => {
+  const map = {cy:'text-cy border-cy/40 bg-cy/10', gr:'text-gr border-gr/40 bg-gr/10',
+               am:'text-am border-am/40 bg-am/10', rd:'text-rd border-rd/40 bg-rd/10',
+               vi:'text-vi border-vi/40 bg-vi/10', mu:'text-muted border-line bg-white/5'};
+  return <span className={'px-2 py-[3px] rounded-full border text-[11px] font-medium '+map[tone]}>{children}</span>;
+};
+
+const riskTone = r => ({High:'rd', Watch:'am', Medium:'am', Low:'gr'}[r] || 'mu');
+const remarkTone = r => ({Defaulter:'rd', Borderline:'am', Safe:'gr'}[r] || 'mu');
+
+function Toast({msg, tone='cy', onDone}) {
+  useEffect(() => { const t = setTimeout(onDone, 3200); return () => clearTimeout(t); }, []);
+  const c = {cy:'border-cy/50 text-cy', gr:'border-gr/50 text-gr', rd:'border-rd/50 text-rd'}[tone];
+  return <div className={'fixed bottom-6 right-6 z-50 fadein bg-panel border '+c+' rounded-xl px-4 py-3 text-sm soft'}>{msg}</div>;
+}
+
+/* ------------------------------------------------------------------ */
+/*  charts                                                             */
+/* ------------------------------------------------------------------ */
+/* charts read the palette off the page, so they follow the theme */
+function css(name, fallback) {
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return v || fallback;
+}
+const P = () => ({
+  grid: css('--c-line','#2f333b'), tick: css('--c-muted','#969ba5'),
+  accent: css('--c-accent','#6fa79d'), ok: css('--c-ok','#7faa84'),
+  warn: css('--c-warn','#c9a267'), bad: css('--c-bad','#c28585'),
+  panel: css('--c-panel','#1c1f25'), muted: css('--c-muted','#969ba5'),
+});
+function useChart(ref, cfg, deps) {
+  useEffect(() => {
+    if (!ref.current || !cfg) return;
+    const c = new Chart(ref.current, cfg);
+    return () => c.destroy();
+  }, deps);
+}
+
+function BarSubjects({subjects, threshold, theme}) {
+  const ref = useRef(); const p = P();
+  useChart(ref, subjects && {
+    type:'bar',
+    data:{ labels: subjects.map(s=>s.Subject),
+      datasets:[{ label:'attendance %', data: subjects.map(s=>s.Percent),
+        backgroundColor: subjects.map(s=> s.Percent < threshold ? p.bad : p.accent),
+        borderRadius:6, barThickness:26 }]},
+    options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}},
+      scales:{ x:{grid:{color:p.grid},ticks:{color:p.tick},max:100},
+               y:{grid:{display:false},ticks:{color:p.tick}} }, indexAxis:'y' }
+  }, [subjects, threshold, theme]);
+  return <canvas ref={ref}/>;
+}
+
+function LineTrend({daily, threshold, theme}) {
+  const ref = useRef(); const p = P();
+  useChart(ref, daily && {
+    type:'line',
+    data:{ labels: daily.map(d=>d.Date),
+      datasets:[
+        {label:'daily %', data: daily.map(d=>d.Percent), borderColor:p.muted,
+         borderWidth:1, pointRadius:1.5, tension:.25},
+        {label:'5 day average', data: daily.map((d,i,a)=>{
+            const w=a.slice(Math.max(0,i-4),i+1); return +(w.reduce((s,x)=>s+x.Percent,0)/w.length).toFixed(2);}),
+         borderColor:p.accent, borderWidth:2.4, pointRadius:0, tension:.35},
+        {label:'cut-off', data: daily.map(()=>threshold), borderColor:p.bad,
+         borderWidth:1, borderDash:[5,4], pointRadius:0}
+      ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{labels:{color:p.tick,boxWidth:12,font:{size:11}}}},
+      scales:{x:{grid:{color:p.grid},ticks:{color:p.tick,maxTicksLimit:8}},
+              y:{grid:{color:p.grid},ticks:{color:p.tick},min:0,max:100}}}
+  }, [daily, threshold, theme]);
+  return <canvas ref={ref}/>;
+}
+
+function ScatterRisk({forecast, threshold, theme}) {
+  const ref = useRef(); const p = P();
+  const col = {High:p.bad, Watch:p.warn, Medium:p.warn, Low:p.ok};
+  useChart(ref, forecast && {
+    type:'scatter',
+    data:{datasets:[{
+      data: forecast.map(f=>({x:f.Current, y:f.Projected, r:6, label:f.RollNo, n:f.Name, risk:f.Risk})),
+      backgroundColor: forecast.map(f=>col[f.Risk]), pointRadius:6, pointHoverRadius:9 }]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>
+        `${c.raw.n} (${c.raw.label}) · now ${c.raw.x}% → ${c.raw.y}% · ${c.raw.risk}`}}},
+      scales:{x:{grid:{color:p.grid},ticks:{color:p.tick},title:{display:true,text:'attendance today %',color:p.tick}},
+              y:{grid:{color:p.grid},ticks:{color:p.tick},title:{display:true,text:'projected %',color:p.tick}}}}
+  }, [forecast, threshold, theme]);
+  return <canvas ref={ref}/>;
+}
+
+function DonutMix({students, threshold, theme}) {
+  const ref = useRef(); const p = P();
+  const counts = students ? students.reduce((a,s)=>{a[s.Remark]=(a[s.Remark]||0)+1;return a;},{}) : null;
+  useChart(ref, counts && {
+    type:'doughnut',
+    data:{labels:Object.keys(counts), datasets:[{data:Object.values(counts),
+      backgroundColor:Object.keys(counts).map(k=>({Defaulter:p.bad,Borderline:p.warn,Safe:p.ok}[k])),
+      borderColor:p.panel, borderWidth:3}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'62%',
+      plugins:{legend:{position:'bottom',labels:{color:p.tick,boxWidth:12,font:{size:11}}}}}
+  }, [students, theme]);
+  return <canvas ref={ref}/>;
+}
+
+/* ------------------------------------------------------------------ */
+/*  login                                                              */
+/* ------------------------------------------------------------------ */
+function Login({onIn}) {
+  const [u,setU] = useState(''), [p,setP] = useState('');
+  const [err,setErr] = useState(''), [busy,setBusy] = useState(false);
+
+  const go = async (e) => {
+    e && e.preventDefault();
+    setBusy(true); setErr('');
+    try {
+      const res = await fetch('/api/login', {method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({username:u, password:p})});
+      if (!res.ok) throw new Error((await res.json()).detail);
+      const data = await res.json();
+      TOKEN = data.token; localStorage.setItem(TOKEN_KEY, TOKEN);
+      onIn(data);
+    } catch (ex) { setErr(ex.message || 'login failed'); }
+    setBusy(false);
+  };
+
+  const demo = (un,pw) => { setU(un); setP(pw); };
+
+  return (
+    <div className="min-h-screen grid lg:grid-cols-2">
+      <div className="hidden lg:flex flex-col justify-between p-12"
+           style={{background:'linear-gradient(160deg, color-mix(in srgb, var(--c-accent) 12%, var(--c-panel)), var(--c-panel2))'}}>
+        <div>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-cy grid place-items-center text-white font-bold">A</div>
+            <div className="text-xl font-bold">AttendX</div>
+          </div>
+          <h1 className="mt-14 text-4xl font-bold leading-tight max-w-md">
+            Attendance that <span className="text-cy">reports itself</span>.
+          </h1>
+          <p className="mt-4 text-muted max-w-md leading-relaxed">
+            An agentic ERP for classroom attendance. Six agents clean the register,
+            forecast who will fall short, flag unusual days, draft the parent
+            letters and build the report — supervised by an agent that decides
+            which tool to run from a question in plain English.
+          </p>
+          <div className="mt-10 space-y-3 text-sm">
+            {[['Predicts end-of-semester shortage before it happens','cy'],
+              ['Detects mass-bunk days and sudden drops','vi'],
+              ['Writes parent warning letters automatically','gr'],
+              ['Every agent action written to an audit trail','am']].map(([t,c])=>(
+              <div key={t} className="flex items-center gap-3">
+                <span className={'w-1.5 h-1.5 rounded-full bg-'+c}></span>
+                <span className="text-muted">{t}</span>
+              </div>))}
+          </div>
+        </div>
+        <div className="font-mono text-[11px] text-muted">
+          Agentic AI and Automation · Unit Test 3 · SIT Nagpur
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center p-8">
+        <Card cls="w-full max-w-md p-8 soft fadein">
+          <div className="lg:hidden flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-xl bg-cy grid place-items-center text-white font-bold">A</div>
+            <div className="font-bold">AttendX</div>
+          </div>
+          <h2 className="text-2xl font-bold">Faculty sign in</h2>
+          <p className="text-muted text-sm mt-1">Staff see only the subjects allotted to them.
+            Students sign in with their roll number as both username and password.</p>
+
+          <form onSubmit={go} className="mt-7 space-y-4">
+            <div>
+              <div className="text-[11px] font-mono uppercase tracking-wider text-muted mb-1.5">username</div>
+              <input value={u} onChange={e=>setU(e.target.value)} autoFocus
+                className="w-full bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60"/>
+            </div>
+            <div>
+              <div className="text-[11px] font-mono uppercase tracking-wider text-muted mb-1.5">password</div>
+              <input type="password" value={p} onChange={e=>setP(e.target.value)}
+                className="w-full bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60"/>
+            </div>
+            {err && <div className="text-rd text-sm flex items-center gap-2"><Icon d={I.alert}/>{err}</div>}
+            <button disabled={busy}
+              className="w-full py-3 rounded-xl font-semibold text-white bg-cy hover:brightness-110 disabled:opacity-60">
+              {busy ? 'signing in...' : 'Sign in'}
+            </button>
+          </form>
+
+          <div className="mt-7 pt-5 border-t border-line">
+            <div className="text-[11px] font-mono uppercase tracking-wider text-muted mb-2">demo accounts</div>
+            <div className="flex gap-2 flex-wrap">
+              <button onClick={()=>demo('ishika','teach123')}
+                className="px-3 py-2 rounded-lg border border-line bg-panel2 text-xs hover:border-cy/50">
+                ishika / teach123 <span className="text-muted">· teacher</span></button>
+              <button onClick={()=>demo('hod','admin123')}
+                className="px-3 py-2 rounded-lg border border-line bg-panel2 text-xs hover:border-vi/50">
+                hod / admin123 <span className="text-muted">· HOD</span></button>
+              <button onClick={()=>demo('23cs104','23cs104')}
+                className="px-3 py-2 rounded-lg border border-line bg-panel2 text-xs hover:border-gr/50">
+                23cs104 / 23cs104 <span className="text-muted">· student</span></button>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  dashboard                                                          */
+/* ------------------------------------------------------------------ */
+function Kpi({label, value, tone='txt', foot}) {
+  const bar = {cy:'bg-cy',gr:'bg-gr',am:'bg-am',rd:'bg-rd',vi:'bg-vi',txt:'bg-muted'}[tone];
+  const col = {cy:'text-cy',gr:'text-gr',am:'text-am',rd:'text-rd',vi:'text-vi',txt:'text-txt'}[tone];
+  return (
+    <Card cls="p-4 relative overflow-hidden">
+      <div className={'absolute left-0 top-0 bottom-0 w-[3px] '+bar}></div>
+      <div className="font-mono text-[10px] tracking-[1.3px] uppercase text-muted">{label}</div>
+      <div className={'text-[26px] font-bold leading-tight mt-1 '+col}>{value}</div>
+      <div className="text-[11px] text-muted mt-0.5">{foot}</div>
+    </Card>
+  );
+}
+
+function Dashboard({data, threshold, theme}) {
+  if (!data) return <Skeleton/>;
+  const s = data.stats;
+  const risky = data.forecast.filter(f => f.Risk === 'High' || f.Risk === 'Watch');
+  return (
+    <div className="space-y-5 fadein">
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3">
+        <Kpi label="Overall" value={s.overall + '%'} tone={s.overall>=threshold?'gr':'rd'}
+             foot={(s.overall>=threshold?'above':'below')+' the '+threshold+'% line'}/>
+        <Kpi label="Defaulters" value={s.defaulters} tone={s.defaulters?'rd':'gr'} foot={'of '+s.students+' students'}/>
+        <Kpi label="Sliding" value={s.sliding} tone={s.sliding?'am':'gr'} foot="safe today, falling"/>
+        <Kpi label="High risk" value={s.high_risk} tone={s.high_risk?'rd':'gr'} foot={'after '+s.classes_left+' more classes'}/>
+        <Kpi label="Class days" value={s.days} tone="cy" foot={s.records+' records'}/>
+        <Kpi label="Weakest" value={s.worst_pct+'%'} tone="vi" foot={s.worst_subject}/>
+      </div>
+
+      <div className="grid lg:grid-cols-3 gap-5">
+        <Card cls="p-5 lg:col-span-2">
+          <Label>insight agent · narrative</Label>
+          <div className="space-y-2 text-[13.5px] leading-relaxed">
+            {data.narrative.split('\n').filter(Boolean).map((l,i)=>(
+              <div key={i} className="flex gap-2.5">
+                <span className="text-cy mt-[7px] w-1 h-1 rounded-full bg-cy shrink-0"></span>
+                <span>{l.replace(/^[-•]\s*/,'')}</span>
+              </div>))}
+          </div>
+        </Card>
+        <Card cls="p-5">
+          <Label>class mix</Label>
+          <div className="h-[210px]"><DonutMix students={data.students} threshold={threshold} theme={theme}/></div>
+        </Card>
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-5">
+        <Card cls="p-5">
+          <Label>day wise trend</Label>
+          <div className="h-[260px]"><LineTrend daily={data.daily} threshold={threshold} theme={theme}/></div>
+        </Card>
+        <Card cls="p-5">
+          <Label>subject wise</Label>
+          <div className="h-[260px]"><BarSubjects subjects={data.subjects} threshold={threshold} theme={theme}/></div>
+        </Card>
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-5">
+        <Card cls="p-5">
+          <Label>forecast · today vs end of semester</Label>
+          <div className="h-[280px]"><ScatterRisk forecast={data.forecast} threshold={threshold} theme={theme}/></div>
+        </Card>
+        <Card cls="p-5">
+          <Label>anomalies detected</Label>
+          {data.anomalies.length === 0 && <div className="text-muted text-sm">Nothing unusual in this window.</div>}
+          <div className="space-y-2.5">
+            {data.anomalies.map((a,i)=>(
+              <div key={i} className="flex gap-3 items-start border border-line rounded-xl p-3 bg-panel2">
+                <span className="text-am mt-0.5"><Icon d={I.alert}/></span>
+                <div>
+                  <div className="text-sm font-medium">{a.Type} · <span className="text-cy">{a.Where}</span></div>
+                  <div className="text-[12.5px] text-muted">{a.Detail}</div>
+                </div>
+              </div>))}
+          </div>
+        </Card>
+      </div>
+
+      <Card cls="p-5">
+        <Label>students needing action</Label>
+        <Table rows={risky} cols={[
+          ['RollNo','Roll'],['Name','Name'],
+          ['Current','Now %'],['Trend','Trend / week'],['Projected','Projected %'],
+          ['NeedToAttend','Must attend'],['Recoverable','Recovery'],['Risk','Risk']]}
+          render={{Risk:v=><Pill tone={riskTone(v)}>{v}</Pill>,
+                   Trend:v=><span className={v<0?'text-rd':'text-gr'}>{v>0?'+':''}{v}</span>}}/>
+        {risky.length===0 && <div className="text-muted text-sm">Nobody is at risk right now.</div>}
+      </Card>
+    </div>
+  );
+}
+
+function Table({rows, cols, render={}}) {
+  if (!rows || !rows.length) return null;
+  return (
+    <div className="overflow-x-auto -mx-1">
+      <table className="w-full text-[13px]">
+        <thead>
+          <tr className="text-left">
+            {cols.map(([k,l])=>(
+              <th key={k} className="font-mono text-[10.5px] uppercase tracking-wider text-cy/80 font-medium pb-2 px-3 border-b border-line whitespace-nowrap">{l}</th>))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r,i)=>(
+            <tr key={i} className="hover:bg-cy/5 border-b border-line/60">
+              {cols.map(([k])=>(
+                <td key={k} className="py-2.5 px-3 whitespace-nowrap">
+                  {render[k] ? render[k](r[k], r) : String(r[k] ?? '')}
+                </td>))}
+            </tr>))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const Skeleton = () => (
+  <div className="space-y-4 animate-pulse">
+    <div className="grid grid-cols-6 gap-3">{[...Array(6)].map((_,i)=><div key={i} className="h-24 bg-panel rounded-2xl"/>)}</div>
+    <div className="h-64 bg-panel rounded-2xl"/><div className="h-64 bg-panel rounded-2xl"/>
+  </div>
+);
+
+/* ------------------------------------------------------------------ */
+/*  mark attendance                                                    */
+/* ------------------------------------------------------------------ */
+const today = () => new Date().toISOString().slice(0,10);
+
+function MarkAttendance({subjects, toast, reload, dash}) {
+  const [sid,setSid]   = useState(subjects.length ? subjects[0].id : null);
+  // default to the day after the last recorded class, which is what a
+  // teacher marking today's register actually wants
+  const nextClass = () => {
+    if (!dash) return today();
+    const d = new Date(dash.stats.to + 'T00:00:00');
+    do { d.setDate(d.getDate() + 1); } while (d.getDay() === 0 || d.getDay() === 6);
+    return d.toISOString().slice(0,10);
+  };
+  const [date,setDate] = useState(nextClass);
+  const [rows,setRows] = useState(null);
+  const [busy,setBusy] = useState(false);
+
+  const load = useCallback(async () => {
+    if (!sid) return;
+    setRows(null);
+    try { setRows(await api(`/roster?subject_id=${sid}&date=${date}`)); }
+    catch (e) { toast(e.message,'rd'); }
+  }, [sid, date]);
+
+  useEffect(() => { load(); }, [load]);
+
+  const toggle = i => setRows(rows.map((r,j)=> j===i ? {...r, present: r.present?0:1} : r));
+  const all = v => setRows(rows.map(r=>({...r, present:v})));
+
+  const save = async () => {
+    setBusy(true);
+    try {
+      const out = await api('/attendance', {method:'POST', body:{
+        date, subject_id: sid,
+        entries: rows.map(r=>({student_id:r.student_id, present:r.present}))}});
+      toast(`Saved · ${out.present}/${out.total} present`, 'gr');
+      reload();
+      load();
+    } catch(e) { toast(e.message,'rd'); }
+    setBusy(false);
+  };
+
+  const present = rows ? rows.filter(r=>r.present).length : 0;
+
+  return (
+    <div className="space-y-5 fadein">
+      <Card cls="p-5">
+        <div className="flex flex-wrap gap-4 items-end">
+          <div>
+            <div className="text-[11px] font-mono uppercase tracking-wider text-muted mb-1.5">subject</div>
+            <select value={sid||''} onChange={e=>setSid(+e.target.value)}
+              className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60 min-w-[220px]">
+              {subjects.map(s=><option key={s.id} value={s.id}>{s.code} · {s.name}</option>)}
+            </select>
+          </div>
+          <div>
+            <div className="text-[11px] font-mono uppercase tracking-wider text-muted mb-1.5">date</div>
+            <input type="date" value={date} onChange={e=>setDate(e.target.value)}
+              className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60"/>
+          </div>
+          <div className="flex gap-2 ml-auto">
+            <button onClick={()=>all(1)} className="px-4 py-2.5 rounded-xl border border-line bg-panel2 text-sm hover:border-gr/50">All present</button>
+            <button onClick={()=>all(0)} className="px-4 py-2.5 rounded-xl border border-line bg-panel2 text-sm hover:border-rd/50">All absent</button>
+            <button onClick={save} disabled={busy || !rows}
+              className="px-5 py-2.5 rounded-xl font-semibold text-white bg-cy hover:brightness-110 disabled:opacity-50">
+              {busy ? 'saving...' : 'Save attendance'}
+            </button>
+          </div>
+        </div>
+        {rows && (
+          <div className="mt-4 flex items-center gap-3 text-sm text-muted">
+            <Pill tone="gr">{present} present</Pill>
+            <Pill tone="rd">{rows.length - present} absent</Pill>
+            {rows.some(r=>r.already_marked) &&
+              <span className="text-am text-[12.5px]">this class was already marked — saving will overwrite it</span>}
+          </div>)}
+      </Card>
+
+      {!rows ? <Skeleton/> : (
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
+          {rows.map((r,i)=>(
+            <button key={r.student_id} onClick={()=>toggle(i)}
+              className={'flex items-center justify-between px-4 py-3 rounded-xl border transition text-left '
+                + (r.present ? 'border-gr/40 bg-gr/[0.07]' : 'border-rd/40 bg-rd/[0.07]')}>
+              <div>
+                <div className="font-medium text-[14px]">{r.name}</div>
+                <div className="font-mono text-[11px] text-muted">{r.roll}</div>
+              </div>
+              <span className={'text-[11px] font-semibold px-2.5 py-1 rounded-full '
+                + (r.present ? 'bg-gr/15 text-gr' : 'bg-rd/15 text-rd')}>
+                {r.present ? 'PRESENT' : 'ABSENT'}
+              </span>
+            </button>))}
+        </div>)}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  students & subjects                                                */
+/* ------------------------------------------------------------------ */
+function Students({me, dash, toast}) {
+  const [list,setList] = useState(null);
+  const [form,setForm] = useState({roll:'',name:'',email:''});
+  const load = async () => { try { setList(await api('/students')); } catch(e){ toast(e.message,'rd'); } };
+  useEffect(() => { load(); }, []);
+
+  const pct = {};
+  (dash ? dash.students : []).forEach(s => pct[s.RollNo] = s);
+
+  const add = async () => {
+    if (!form.roll || !form.name) return toast('roll number and name are required','rd');
+    try { await api('/students',{method:'POST',body:form}); setForm({roll:'',name:'',email:''});
+          toast('Student added','gr'); load(); }
+    catch(e){ toast(e.message,'rd'); }
+  };
+
+  return (
+    <div className="space-y-5 fadein">
+      {me.role === 'hod' && (
+        <Card cls="p-5">
+          <Label>add a student</Label>
+          <div className="flex flex-wrap gap-3">
+            {[['roll','Roll number'],['name','Full name'],['email','Email']].map(([k,ph])=>(
+              <input key={k} placeholder={ph} value={form[k]}
+                onChange={e=>setForm({...form,[k]:e.target.value})}
+                className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60 flex-1 min-w-[180px]"/>))}
+            <button onClick={add} className="px-5 py-2.5 rounded-xl font-semibold text-white bg-cy hover:brightness-110">Add</button>
+          </div>
+        </Card>)}
+
+      <Card cls="p-5">
+        <Label>class register · {list ? list.length : 0} students</Label>
+        {!list ? <Skeleton/> :
+          <Table rows={list.map(s=>({...s,
+                  percent: pct[s.roll] ? pct[s.roll].Percent : '—',
+                  remark : pct[s.roll] ? pct[s.roll].Remark : '—'}))}
+            cols={[['roll','Roll'],['name','Name'],['email','Email'],
+                   ['percent','Attendance %'],['remark','Status']]}
+            render={{remark:v=> v==='—' ? <span className="text-muted">—</span> : <Pill tone={remarkTone(v)}>{v}</Pill>,
+                     percent:v=> <span className={v!=='—' && v<75 ? 'text-rd' : ''}>{v}{v!=='—'?'%':''}</span>}}/>}
+      </Card>
+    </div>
+  );
+}
+
+function Subjects({me, dash, toast}) {
+  const [list,setList] = useState(null), [teachers,setTeachers] = useState([]);
+  const [form,setForm] = useState({code:'',name:'',teacher_id:1});
+  const load = async () => {
+    try { setList(await api('/subjects')); setTeachers(await api('/teachers')); }
+    catch(e){ toast(e.message,'rd'); }
+  };
+  useEffect(() => { load(); }, []);
+
+  const stat = {};
+  (dash ? dash.subjects : []).forEach(s => stat[s.Subject] = s);
+
+  const add = async () => {
+    try { await api('/subjects',{method:'POST',body:{...form, teacher_id:+form.teacher_id}});
+          setForm({code:'',name:'',teacher_id:1}); toast('Subject added','gr'); load(); }
+    catch(e){ toast(e.message,'rd'); }
+  };
+
+  return (
+    <div className="space-y-5 fadein">
+      {me.role === 'hod' && (
+        <Card cls="p-5">
+          <Label>add a subject</Label>
+          <div className="flex flex-wrap gap-3">
+            <input placeholder="Code" value={form.code} onChange={e=>setForm({...form,code:e.target.value})}
+              className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60 w-36"/>
+            <input placeholder="Subject name" value={form.name} onChange={e=>setForm({...form,name:e.target.value})}
+              className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60 flex-1 min-w-[200px]"/>
+            <select value={form.teacher_id} onChange={e=>setForm({...form,teacher_id:e.target.value})}
+              className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60">
+              {teachers.map(t=><option key={t.id} value={t.id}>{t.name}</option>)}
+            </select>
+            <button onClick={add} className="px-5 py-2.5 rounded-xl font-semibold text-white bg-cy hover:brightness-110">Add</button>
+          </div>
+        </Card>)}
+
+      <Card cls="p-5">
+        <Label>subjects allotted</Label>
+        {!list ? <Skeleton/> :
+          <Table rows={list.map(s=>({...s,
+                  percent: stat[s.name] ? stat[s.name].Percent : '—',
+                  classes: stat[s.name] ? stat[s.name].Classes : '—'}))}
+            cols={[['code','Code'],['name','Subject'],['teacher','Faculty'],
+                   ['classes','Records'],['percent','Attendance %']]}
+            render={{percent:v=> v==='—' ? <span className="text-muted">—</span>
+                      : <span className={v<75?'text-rd':'text-gr'}>{v}%</span>}}/>}
+      </Card>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  AI assistant                                                       */
+/* ------------------------------------------------------------------ */
+const SUGGESTIONS = [
+  'Give me the class summary',
+  'Who are the defaulters in Soft Skills?',
+  'How many classes does 23CS104 need to reach 75%?',
+  'Who is at risk by the end of the semester?',
+  'Is there anything unusual in this data?',
+  'What happened on 2026-08-18?',
+  'Draft warning letters for the defaulters',
+];
+
+function Assistant({threshold, apiKey, toast, reload, setLastRun}) {
+  const [msgs,setMsgs] = useState([{role:'assistant', text:
+    'Supervisor ready. I can call eleven tools over your attendance data — summaries, a single student\'s card, defaulter lists, how many classes somebody still needs, the end-of-semester forecast, anomaly checks, warning letters and the report builder. Ask in plain English.'}]);
+  const [trace,setTrace] = useState([]);
+  const [q,setQ] = useState(''), [busy,setBusy] = useState(false);
+  const [planner,setPlanner] = useState('');
+  const [showTrace,setShowTrace] = useState(false);
+  const endRef = useRef();
+
+  useEffect(()=>{ endRef.current && endRef.current.scrollIntoView({behavior:'smooth'}); },[msgs,busy]);
+
+  const ask = async (text) => {
+    const question = (text || q).trim();
+    if (!question || busy) return;
+    setQ(''); setBusy(true);
+    setMsgs(m => [...m, {role:'user', text:question}]);
+    try {
+      const out = await api('/agent/ask', {method:'POST',
+        body:{question, threshold, api_key: apiKey}});
+      setMsgs(m => [...m, {role:'assistant', text: out.answer, meta: out}]);
+      setTrace(out.trace); setPlanner(out.planner); setLastRun(out);
+      if (/letter|report/i.test(question)) reload();
+    } catch(e) { toast(e.message,'rd'); setMsgs(m=>m.slice(0,-1)); }
+    setBusy(false);
+  };
+
+  return (
+    <div className={'grid gap-5 fadein ' + (showTrace ? 'lg:grid-cols-5' : 'grid-cols-1')}>
+      <Card cls={'p-5 flex flex-col ' + (showTrace ? 'lg:col-span-3' : '')} >
+        <div className="flex items-center justify-between mb-3">
+          <Label>attendance assistant</Label>
+          <div className="flex items-center gap-3">
+            {planner && <span className="font-mono text-[10.5px] text-muted">{planner}</span>}
+            <button onClick={()=>setShowTrace(!showTrace)}
+              className="text-[11.5px] text-muted hover:text-cy underline decoration-dotted underline-offset-4">
+              {showTrace ? 'hide working' : 'show working'}
+            </button>
+          </div>
+        </div>
+
+        <div className="flex-1 overflow-y-auto space-y-3 pr-1" style={{maxHeight:'52vh'}}>
+          {msgs.map((m,i)=>(
+            <div key={i} className={'flex ' + (m.role==='user' ? 'justify-end' : 'justify-start')}>
+              <div className={'max-w-[88%] rounded-2xl px-4 py-2.5 text-[13.5px] leading-relaxed whitespace-pre-wrap '
+                + (m.role==='user'
+                    ? 'bg-cy/10 border border-cy/25'
+                    : 'bg-panel2 border border-line')}>
+                {m.text}
+                {m.meta && (
+                  <div className="mt-3 pt-2.5 border-t border-line flex flex-wrap items-center gap-1.5">
+                    <span className="text-[10.5px] font-mono uppercase tracking-wider text-muted mr-1">handled by</span>
+                    {m.meta.agents_used.map((a,k)=>(
+                      <React.Fragment key={a}>
+                        {k>0 && <span className="text-muted text-[11px]">→</span>}
+                        <Pill tone={AGENT_COLOR[a]||'cy'}>{a}</Pill>
+                      </React.Fragment>))}
+                    <span className="ml-auto text-[10.5px] font-mono text-muted">
+                      {m.meta.tools_used.length} tool calls · {m.meta.ms} ms
+                      {m.meta.llm ? ` · ${m.meta.tokens.in}+${m.meta.tokens.out} tok` : ''}
+                    </span>
+                  </div>)}
+              </div>
+            </div>))}
+          {busy && <div className="flex gap-1.5 items-center text-muted text-sm px-2">
+            <span className="w-1.5 h-1.5 bg-cy rounded-full animate-bounce"></span>
+            <span className="w-1.5 h-1.5 bg-cy rounded-full animate-bounce" style={{animationDelay:'.15s'}}></span>
+            <span className="w-1.5 h-1.5 bg-cy rounded-full animate-bounce" style={{animationDelay:'.3s'}}></span>
+            <span className="ml-2">running tools…</span></div>}
+          <div ref={endRef}/>
+        </div>
+
+        <div className="mt-4 flex gap-2">
+          <input value={q} onChange={e=>setQ(e.target.value)}
+            onKeyDown={e=>e.key==='Enter' && ask()}
+            placeholder="ask anything about the attendance data..."
+            className="flex-1 bg-panel2 border border-line rounded-xl px-4 py-3 outline-none focus:border-cy/60"/>
+          <button onClick={()=>ask()} disabled={busy}
+            className="px-6 rounded-xl font-semibold text-white bg-cy hover:brightness-110 disabled:opacity-50">Send</button>
+        </div>
+        <div className="mt-3 flex gap-2 flex-wrap">
+          {SUGGESTIONS.map(s=>(
+            <button key={s} onClick={()=>ask(s)}
+              className="text-[11.5px] px-3 py-1.5 rounded-full border border-line bg-panel2 text-muted hover:border-cy/50 hover:text-txt">{s}</button>))}
+        </div>
+      </Card>
+
+      {showTrace && <Card cls="p-5 lg:col-span-2">
+        <Label>how the answer was produced</Label>
+        <div className="codebox border border-line rounded-xl p-3 font-mono text-[11.5px] leading-relaxed overflow-auto"
+             style={{maxHeight:'62vh'}}>
+          {trace.length === 0
+            ? <span className="text-muted">every tool the supervisor calls will be printed here</span>
+            : trace.map((t,i)=>(
+              <div key={i} className="mb-2">
+                <span className="text-muted">{String(t.step).padStart(2,'0')}</span>{' '}
+                <span className={t.kind==='route' ? 'text-cy'
+                                : t.kind==='result' ? 'text-vi'
+                                : t.kind==='think' ? 'text-am' : 'text-txt'}>
+                  {t.agent}</span>
+                <span className="text-muted"> · {t.kind}</span>
+                {' | '}{t.action}
+                {t.params && <span className="text-muted"> ({t.params})</span>}
+                {t.ms != null && <span className="text-muted"> · {t.ms}ms</span>}
+                {t.outcome && <div className="pl-5 opacity-80">→ {t.outcome}</div>}
+              </div>))}
+        </div>
+      </Card>}
+    </div>
+  );
+}
+
+
+/* ------------------------------------------------------------------ */
+/*  exemptions - an approved absence leaves the denominator            */
+/* ------------------------------------------------------------------ */
+function Exemptions({me, toast, reload}) {
+  const [list,setList]   = useState(null);
+  const [students,setSt] = useState([]);
+  const [subjects,setSu] = useState([]);
+  const [f,setF] = useState({student_id:'', subject_id:'', from_date:'',
+                             to_date:'', reason:'', kind:'medical'});
+
+  const load = async () => {
+    try {
+      setList(await api('/exemptions'));
+      setSt(await api('/students'));
+      setSu(await api('/subjects'));
+    } catch(e){ toast(e.message,'rd'); }
+  };
+  useEffect(()=>{ load(); }, []);
+
+  const add = async () => {
+    if (!f.student_id || !f.from_date || !f.to_date || !f.reason)
+      return toast('student, both dates and a reason are required','rd');
+    try {
+      await api('/exemptions', {method:'POST', body:{
+        ...f, student_id:+f.student_id,
+        subject_id: f.subject_id ? +f.subject_id : null}});
+      setF({student_id:'', subject_id:'', from_date:'', to_date:'', reason:'', kind:'medical'});
+      toast('Exemption approved - those classes no longer count','gr');
+      load(); reload();
+    } catch(e){ toast(e.message,'rd'); }
+  };
+
+  const drop = async (id) => {
+    try { await api('/exemptions/'+id, {method:'DELETE'});
+          toast('Exemption revoked','cy'); load(); reload(); }
+    catch(e){ toast(e.message,'rd'); }
+  };
+
+  return (
+    <div className="space-y-5 fadein">
+      <Card cls="p-5">
+        <Label>approve an exemption</Label>
+        <p className="text-[12.5px] text-muted mb-4 max-w-3xl">
+          Medical leave, a college event or an internship: the classes in this range
+          stop counting towards the student's percentage instead of being marked
+          present. The register itself is never altered — the exemption sits beside it
+          and is visible in the activity log.
+        </p>
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
+          <select value={f.student_id} onChange={e=>setF({...f,student_id:e.target.value})}
+            className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60">
+            <option value="">select the student</option>
+            {students.map(s=><option key={s.id} value={s.id}>{s.roll} · {s.name}</option>)}
+          </select>
+          <select value={f.subject_id} onChange={e=>setF({...f,subject_id:e.target.value})}
+            className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60">
+            <option value="">all subjects</option>
+            {subjects.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}
+          </select>
+          <select value={f.kind} onChange={e=>setF({...f,kind:e.target.value})}
+            className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60">
+            <option value="medical">medical</option>
+            <option value="college event">college event</option>
+            <option value="internship">internship</option>
+            <option value="condonation">condonation</option>
+          </select>
+          <input type="date" value={f.from_date} onChange={e=>setF({...f,from_date:e.target.value})}
+            className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60"/>
+          <input type="date" value={f.to_date} onChange={e=>setF({...f,to_date:e.target.value})}
+            className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60"/>
+          <input placeholder="reason / certificate reference" value={f.reason}
+            onChange={e=>setF({...f,reason:e.target.value})}
+            className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60"/>
+        </div>
+        <button onClick={add}
+          className="mt-4 px-5 py-2.5 rounded-xl font-semibold text-white bg-cy hover:brightness-110">
+          Approve exemption</button>
+      </Card>
+
+      <Card cls="p-5">
+        <Label>approved exemptions</Label>
+        {!list ? <Skeleton/> : list.length === 0
+          ? <div className="text-muted text-sm">Nothing approved yet.</div>
+          : <Table rows={list} cols={[['roll','Roll'],['student','Student'],
+                ['subject','Subject'],['from_date','From'],['to_date','To'],
+                ['kind','Type'],['reason','Reason'],['approver','Approved by'],
+                ['id','']]}
+              render={{
+                subject:v=> v || <span className="text-muted">all subjects</span>,
+                kind:v=><Pill tone="vi">{v}</Pill>,
+                id:v=><button onClick={()=>drop(v)}
+                        className="text-[12px] text-muted hover:text-rd">revoke</button>}}/>}
+      </Card>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  the student's own read-only view                                   */
+/* ------------------------------------------------------------------ */
+function StudentApp({me, theme, switchTheme, onOut, toast}) {
+  const [d,setD] = useState(null);
+  const [threshold,setTh] = useState(75);
+
+  useEffect(() => {
+    api(`/student/me?threshold=${threshold}`).then(setD)
+      .catch(e=>toast(e.message,'rd'));
+  }, [threshold]);
+
+  const card = d && d.card, fc = d && d.forecast;
+  const ok = card && card.Percent >= threshold;
+
+  return (
+    <div className="min-h-screen">
+      <header className="border-b border-line bg-panel">
+        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center gap-4">
+          <div className="w-9 h-9 rounded-xl bg-cy grid place-items-center text-white font-bold">A</div>
+          <div className="flex-1">
+            <div className="font-semibold leading-none">My attendance</div>
+            <div className="text-[11.5px] text-muted font-mono mt-1">{me.name}</div>
+          </div>
+          <button onClick={()=>switchTheme(theme==='dark'?'light':'dark')}
+            className="px-3 py-2 rounded-xl border border-line text-muted hover:text-txt text-[12px]">
+            {theme==='dark' ? 'Light' : 'Dark'}</button>
+          <button onClick={onOut}
+            className="px-3 py-2 rounded-xl border border-line text-muted hover:text-rd text-[12px]">
+            Sign out</button>
+        </div>
+      </header>
+
+      <div className="max-w-4xl mx-auto p-6 space-y-5">
+        {!d ? <Skeleton/> : (<>
+          <Card cls={'p-6 ' + (ok ? 'border-gr/40' : 'border-rd/40')}>
+            <div className="flex flex-wrap items-end gap-6">
+              <div>
+                <div className="font-mono text-[10px] uppercase tracking-[1.3px] text-muted">my attendance</div>
+                <div className={'text-[46px] font-bold leading-none mt-1 ' + (ok?'text-gr':'text-rd')}>
+                  {card.Percent}%</div>
+                <div className="text-[12.5px] text-muted mt-1">
+                  {card.Attended} of {card.Classes} classes · requirement {threshold}%</div>
+              </div>
+              <div className="flex-1 min-w-[240px]">
+                <div className="h-2.5 rounded-full bg-panel2 overflow-hidden">
+                  <div className={'h-full ' + (ok?'bg-gr':'bg-rd')}
+                       style={{width: Math.min(card.Percent,100)+'%'}}/>
+                </div>
+                <div className="text-[12px] text-muted mt-2">
+                  {ok
+                    ? `You are above the line. You can miss ${fc.CanMiss} more classes and stay eligible.`
+                    : fc.NeedToAttend > d.classes_left
+                      ? `You cannot reach ${threshold}% with only ${d.classes_left} classes left — the best you can reach is ${fc.BestPossible}%. Please speak to your class teacher about condonation.`
+                      : `Attend the next ${fc.NeedToAttend} of the ${d.classes_left} remaining classes without a break to become eligible.`}
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <div className="grid sm:grid-cols-3 gap-4">
+            <Card cls="p-4">
+              <div className="font-mono text-[10px] uppercase tracking-[1.3px] text-muted">projected</div>
+              <div className={'text-2xl font-bold mt-1 ' + (fc.Projected>=threshold?'text-gr':'text-rd')}>
+                {fc.Projected}%</div>
+              <div className="text-[11.5px] text-muted">by the end of the semester</div>
+            </Card>
+            <Card cls="p-4">
+              <div className="font-mono text-[10px] uppercase tracking-[1.3px] text-muted">weekly trend</div>
+              <div className={'text-2xl font-bold mt-1 ' + (fc.Trend<0?'text-rd':'text-gr')}>
+                {fc.Trend>0?'+':''}{fc.Trend}</div>
+              <div className="text-[11.5px] text-muted">points per week</div>
+            </Card>
+            <Card cls="p-4">
+              <div className="font-mono text-[10px] uppercase tracking-[1.3px] text-muted">status</div>
+              <div className="mt-2"><Pill tone={riskTone(fc.Risk)}>{fc.Risk} risk</Pill></div>
+              <div className="text-[11.5px] text-muted mt-1.5">{fc.Recoverable}</div>
+            </Card>
+          </div>
+
+          <Card cls="p-5">
+            <Label>subject wise</Label>
+            <div className="space-y-3">
+              {d.subjects.map(s=>(
+                <div key={s.Subject} className="flex items-center gap-4">
+                  <div className="w-40 text-[13px] truncate">{s.Subject}</div>
+                  <div className="flex-1 h-2 rounded-full bg-panel2 overflow-hidden">
+                    <div className={'h-full ' + (s.Percent<threshold?'bg-rd':'bg-cy')}
+                         style={{width: Math.min(s.Percent,100)+'%'}}/>
+                  </div>
+                  <div className={'w-16 text-right text-[13px] ' + (s.Percent<threshold?'text-rd':'')}>
+                    {s.Percent}%</div>
+                  <div className="w-24 text-right text-[11.5px] text-muted">
+                    {s.Attended}/{s.Classes}</div>
+                </div>))}
+            </div>
+          </Card>
+
+          {d.exemptions.length > 0 && (
+            <Card cls="p-5">
+              <Label>approved exemptions</Label>
+              <div className="space-y-2">
+                {d.exemptions.map((e,i)=>(
+                  <div key={i} className="flex flex-wrap gap-3 items-center text-[13px] border border-line rounded-xl p-3 bg-panel2">
+                    <Pill tone="vi">{e.kind}</Pill>
+                    <span className="font-mono text-[12px] text-muted">{e.from_date} → {e.to_date}</span>
+                    <span className="text-muted">{e.reason}</span>
+                  </div>))}
+              </div>
+              <div className="text-[12px] text-muted mt-3">
+                Classes in these dates are not counted against you.
+              </div>
+            </Card>)}
+        </>)}
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  agent system - who did what, and how                               */
+/* ------------------------------------------------------------------ */
+const AGENT_COLOR = {
+  Supervisor:'cy', DataAgent:'vi', AnalyticsAgent:'gr',
+  InsightAgent:'am', CommsAgent:'rd', ReportAgent:'vi'
+};
+
+function AgentCard({a, active}) {
+  const c = AGENT_COLOR[a.name] || 'cy';
+  return (
+    <div className={'rounded-2xl border p-4 transition ' +
+      (active ? `border-${c}/60 bg-${c}/[0.07] soft` : 'border-line bg-panel')}>
+      <div className="flex items-center justify-between">
+        <div className="font-semibold text-[14.5px]">{a.name}</div>
+        {active ? <Pill tone={c}>used</Pill> : <span className="text-[11px] text-muted">{a.calls} calls</span>}
+      </div>
+      <div className="text-[12.5px] text-muted mt-2 leading-relaxed">{a.role}</div>
+      <div className="mt-3 text-[11px] font-mono text-muted">{a.reasoning}</div>
+      {a.tools.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {a.tools.map(t=>(
+            <span key={t} className="font-mono text-[10.5px] px-2 py-1 rounded-md bg-panel2 border border-line text-muted">{t}</span>))}
+        </div>)}
+    </div>
+  );
+}
+
+
+function EvalPanel({apiKey, llm, toast}) {
+  const [runs,setRuns] = useState({});
+  const [busy,setBusy] = useState('');
+  const [open,setOpen] = useState(false);
+
+  const run = async (useLlm) => {
+    setBusy(useLlm ? 'llm' : 'keyword');
+    try {
+      const out = await api('/agent/eval', {method:'POST',
+        body:{threshold:75, use_llm:useLlm, api_key:apiKey}});
+      setRuns(r => ({...r, [out.planner]: out}));
+      toast(`${out.planner} planner · ${out.accuracy}% overall`, 'gr');
+      setOpen(true);
+    } catch(e){ toast(e.message,'rd'); }
+    setBusy('');
+  };
+
+  const k = runs.keyword, l = runs.llm;
+  const bar = (v, tone) => (
+    <div className="h-2 rounded-full bg-panel2 overflow-hidden w-full">
+      <div className={'h-full bg-'+tone} style={{width:(v||0)+'%'}}/>
+    </div>);
+
+  return (
+    <Card cls="p-5">
+      <div className="flex flex-wrap items-center gap-4">
+        <div className="flex-1 min-w-[280px]">
+          <Label>routing evaluation</Label>
+          <p className="text-[12.5px] text-muted leading-relaxed">
+            Twenty-six fixed questions, each with the tool a correct answer must call.
+            Twenty are phrased plainly; six deliberately avoid the obvious keyword
+            (“should I be worried about anyone?”) to show what the LLM router is
+            actually buying over the fallback.
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <button onClick={()=>run(false)} disabled={!!busy}
+            className="px-4 py-2.5 rounded-xl border border-line bg-panel2 text-sm disabled:opacity-50">
+            {busy==='keyword' ? 'running...' : 'Run on fallback planner'}</button>
+          <button onClick={()=>run(true)} disabled={!!busy || !llm}
+            title={llm ? '' : 'add a Groq key first'}
+            className="px-4 py-2.5 rounded-xl font-semibold text-white bg-cy hover:brightness-110 disabled:opacity-40">
+            {busy==='llm' ? 'running...' : 'Run on LLM planner'}</button>
+        </div>
+      </div>
+
+      {(k || l) && (
+        <div className="mt-5 grid sm:grid-cols-2 gap-4">
+          {[['keyword', k], ['llm', l]].map(([name, r]) => (
+            <div key={name} className={'rounded-2xl border p-4 ' + (r ? 'border-line' : 'border-line/50 opacity-50')}>
+              <div className="flex items-center justify-between">
+                <div className="font-medium text-[14px]">
+                  {name === 'llm' ? 'LLM planner' : 'Fallback planner'}</div>
+                {r && <span className="font-mono text-[11.5px] text-muted">{r.seconds}s</span>}
+              </div>
+              {!r ? <div className="text-[12.5px] text-muted mt-3">not run yet</div> : (
+                <div className="mt-3 space-y-3">
+                  <div>
+                    <div className="flex justify-between text-[12px] mb-1">
+                      <span className="text-muted">overall</span>
+                      <span className="font-semibold">{r.accuracy}% ({r.passed}/{r.total})</span>
+                    </div>
+                    {bar(r.accuracy, r.accuracy >= 80 ? 'gr' : r.accuracy >= 50 ? 'am' : 'rd')}
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-[12px] mb-1">
+                      <span className="text-muted">plainly worded</span>
+                      <span>{r.plain.accuracy}% ({r.plain.passed}/{r.plain.total})</span>
+                    </div>
+                    {bar(r.plain.accuracy, 'cy')}
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-[12px] mb-1">
+                      <span className="text-muted">indirectly worded</span>
+                      <span>{r.hard.accuracy}% ({r.hard.passed}/{r.hard.total})</span>
+                    </div>
+                    {bar(r.hard.accuracy, r.hard.accuracy >= 60 ? 'gr' : 'am')}
+                  </div>
+                </div>)}
+            </div>))}
+        </div>)}
+
+      {(k || l) && (
+        <div className="mt-4">
+          <button onClick={()=>setOpen(!open)}
+            className="text-[12px] text-muted hover:text-cy underline decoration-dotted underline-offset-4">
+            {open ? 'hide the question by question result' : 'show the question by question result'}</button>
+          {open && (
+            <div className="mt-3">
+              <Table rows={(l || k).rows.map((row,i)=>({
+                  q: row.question,
+                  kind: row.hard ? 'indirect' : 'plain',
+                  expected: row.expected.join(' / '),
+                  keyword: k ? (k.rows[i].pass ? 'pass' : 'miss · ' + (k.rows[i].called[0]||'none')) : '—',
+                  llm: l ? (l.rows[i].pass ? 'pass' : 'miss · ' + (l.rows[i].called[0]||'none')) : '—',
+                }))}
+                cols={[['q','Question'],['kind','Type'],['expected','Must call'],
+                       ['keyword','Fallback'],['llm','LLM']]}
+                render={{
+                  kind:v=><Pill tone={v==='indirect'?'am':'mu'}>{v}</Pill>,
+                  expected:v=><span className="font-mono text-[11.5px] text-muted">{v}</span>,
+                  keyword:v=><span className={v==='pass'?'text-gr':v==='—'?'text-muted':'text-rd'}>{v}</span>,
+                  llm:v=><span className={v==='pass'?'text-gr':v==='—'?'text-muted':'text-rd'}>{v}</span>}}/>
+            </div>)}
+        </div>)}
+    </Card>
+  );
+}
+
+function Agents({lastRun, apiKey, toast}) {
+  const [reg,setReg] = useState(null);
+  const [test,setTest] = useState(null);
+  const [busy,setBusy] = useState(false);
+
+  useEffect(() => { api('/agents').then(setReg).catch(e=>toast(e.message,'rd')); }, [lastRun]);
+
+  const runTest = async () => {
+    setBusy(true); setTest(null);
+    try {
+      const out = await api('/agent/test', {method:'POST',
+        body:{question:'test', api_key: apiKey}});
+      setTest(out);
+      toast(out.ok ? `Groq connected · ${out.model}` : out.error, out.ok ? 'gr' : 'rd');
+      setReg(await api('/agents'));
+    } catch(e) { toast(e.message,'rd'); }
+    setBusy(false);
+  };
+
+  if (!reg) return <Skeleton/>;
+  const used = lastRun ? lastRun.agents_used : [];
+  const sup = reg.agents.find(a=>a.name==='Supervisor');
+  const workers = reg.agents.filter(a=>a.name!=='Supervisor');
+
+  return (
+    <div className="space-y-5 fadein">
+      {/* brain */}
+      <Card cls="p-5">
+        <div className="flex flex-wrap items-center gap-4">
+          <div className="flex-1 min-w-[280px]">
+            <Label>reasoning engine</Label>
+            <div className="flex items-center gap-2 flex-wrap">
+              <Pill tone={reg.llm.enabled?'gr':'am'}>
+                {reg.llm.enabled ? 'LLM function calling' : 'offline keyword planner'}
+              </Pill>
+              <span className="font-mono text-[12px] text-muted">{reg.llm.model}</span>
+            </div>
+            <div className="text-[12.5px] text-muted mt-2 leading-relaxed">
+              With a Groq key the supervisor sends all {reg.tools.length} tool schemas to the
+              model and the model decides which agents to activate. Without a key the same
+              tools are matched by keyword, so the system degrades instead of failing.
+            </div>
+          </div>
+          <button onClick={runTest} disabled={busy}
+            className="px-5 py-2.5 rounded-xl font-semibold text-white bg-cy hover:brightness-110 disabled:opacity-50">
+            {busy ? 'testing...' : 'Test Groq key'}</button>
+        </div>
+        {test && (
+          <div className={'mt-4 rounded-xl border p-3 text-[13px] '
+            + (test.ok ? 'border-gr/40 bg-gr/[0.07]' : 'border-rd/40 bg-rd/[0.07]')}>
+            {test.ok
+              ? <span>Key works · model <b className="font-mono">{test.model}</b> · round trip {test.ms} ms · {test.available} models available on this key · replied “{test.reply}”</span>
+              : <span>{test.error}</span>}
+          </div>)}
+      </Card>
+
+      {/* last run */}
+      {lastRun && (
+        <Card cls="p-5">
+          <Label>last question · which agents ran</Label>
+          <div className="flex flex-wrap items-center gap-2">
+            {lastRun.agents_used.map((a,i)=>(
+              <React.Fragment key={a}>
+                {i>0 && <span className="text-muted">→</span>}
+                <Pill tone={AGENT_COLOR[a]||'cy'}>{a}</Pill>
+              </React.Fragment>))}
+            <span className="ml-auto font-mono text-[11.5px] text-muted">
+              {lastRun.planner} · {lastRun.ms} ms
+              {lastRun.llm ? ` · ${lastRun.rounds} LLM rounds · ${lastRun.tokens.in}+${lastRun.tokens.out} tokens` : ''}
+            </span>
+          </div>
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {lastRun.tools_used.map((t,i)=>(
+              <span key={i} className="font-mono text-[10.5px] px-2 py-1 rounded-md bg-cy/10 border border-cy/30 text-cy">{t}</span>))}
+          </div>
+        </Card>)}
+
+      {/* topology */}
+      <Card cls="p-5">
+        <Label>agent topology</Label>
+        <div className="max-w-xl mx-auto">
+          <AgentCard a={sup} active={used.includes('Supervisor')}/>
+        </div>
+        <div className="flex justify-center my-3">
+          <svg width="220" height="34" viewBox="0 0 220 34" className="text-line">
+            <path d="M110 0 L110 12 M12 34 L12 20 L208 20 L208 34 M110 12 L110 20"
+                  stroke="currentColor" strokeWidth="1.5" fill="none"/>
+          </svg>
+        </div>
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
+          {workers.map(a => <AgentCard key={a.name} a={a} active={used.includes(a.name)}/>)}
+        </div>
+      </Card>
+
+      {/* tools */}
+      <Card cls="p-5">
+        <Label>tool registry · {reg.tools.length} callable functions</Label>
+        <Table rows={reg.tools} cols={[['name','Tool'],['owner','Owned by'],
+                                       ['params','Parameters'],['description','What it returns']]}
+          render={{
+            name:v=><span className="font-mono text-[12px] text-cy">{v}</span>,
+            owner:v=><Pill tone={AGENT_COLOR[v]||'cy'}>{v}</Pill>,
+            params:v=> v.length ? <span className="font-mono text-[11.5px] text-muted">{v.join(', ')}</span>
+                                : <span className="text-muted">—</span>}}/>
+      </Card>
+
+      {/* evaluation */}
+      <EvalPanel apiKey={apiKey} llm={reg.llm.enabled} toast={toast}/>
+
+      {/* prompt */}
+      <Card cls="p-5">
+        <Label>supervisor system prompt</Label>
+        <pre className="bg-panel2 border border-line rounded-xl p-4 text-[12.5px] leading-relaxed whitespace-pre-wrap font-mono text-muted">{reg.system_prompt}</pre>
+      </Card>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  letters, reports, audit, console                                   */
+/* ------------------------------------------------------------------ */
+function Letters({threshold, toast}) {
+  const [list,setList] = useState(null), [busy,setBusy] = useState(false);
+  const [open,setOpen] = useState(null);
+  const [sending,setSending] = useState(false);
+  const [dryRun,setDry] = useState(true);
+  const [smtp,setSmtp] = useState({host:'smtp.gmail.com', port:587, user:'', password:''});
+  const [showSmtp,setShowSmtp] = useState(false);
+  const [sent,setSent] = useState(null);
+
+  const refresh = async () => {
+    try { setList(await api('/letters')); } catch(e){ toast(e.message,'rd'); }
+  };
+  useEffect(()=>{ refresh(); }, []);
+
+  const gen = async () => {
+    setBusy(true);
+    try { const out = await api(`/letters?threshold=${threshold}`, {method:'POST'});
+          setList(out.letters); setSent(null);
+          toast(`${out.letters.length} letters drafted`,'gr'); }
+    catch(e){ toast(e.message,'rd'); }
+    setBusy(false);
+  };
+
+  const send = async () => {
+    if (!list || !list.length) return toast('draft the letters first','rd');
+    if (!dryRun && !confirm(`This will email ${list.length} parents for real. Continue?`)) return;
+    setSending(true);
+    try {
+      const out = await api('/letters/send', {method:'POST',
+        body:{ids:[], dry_run:dryRun, ...smtp, port:+smtp.port}});
+      setSent(out);
+      toast(dryRun ? `Dry run complete — ${out.sent} letters previewed, nothing was sent`
+                   : `${out.sent} letters emailed`, 'gr');
+      refresh();
+    } catch(e){ toast(e.message,'rd'); }
+    setSending(false);
+  };
+
+  return (
+    <div className="space-y-5 fadein">
+      <Card cls="p-5 flex flex-wrap items-center gap-4">
+        <div className="flex-1 min-w-[260px]">
+          <div className="font-semibold">Communication agent</div>
+          <div className="text-muted text-[13px] mt-1">
+            Drafts one letter per defaulter using their real figures and how many classes
+            they still need. With a Groq key the wording is written by the model, otherwise
+            a formal template is used.
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-2 items-center">
+          <button onClick={gen} disabled={busy}
+            className="px-5 py-2.5 rounded-xl font-semibold text-white bg-cy hover:brightness-110 disabled:opacity-50">
+            {busy ? 'drafting...' : 'Draft letters'}</button>
+          <button onClick={send} disabled={sending || !list || !list.length}
+            className={'px-5 py-2.5 rounded-xl font-semibold border disabled:opacity-40 '
+              + (dryRun ? 'border-line bg-panel2 text-txt' : 'border-rd/50 bg-rd/10 text-rd')}>
+            {sending ? 'sending...' : dryRun ? 'Preview send (dry run)' : 'Send for real'}</button>
+          <label className="flex items-center gap-2 text-[12.5px] text-muted px-3 py-2 rounded-xl border border-line cursor-pointer">
+            <input type="checkbox" checked={dryRun} onChange={e=>setDry(e.target.checked)} className="w-4 h-4"/>
+            dry run
+          </label>
+          <button onClick={()=>setShowSmtp(!showSmtp)}
+            className="px-3 py-2 rounded-xl border border-line text-muted text-[12.5px] hover:text-txt">
+            mail settings</button>
+        </div>
+        {list && list.length>0 &&
+          <a href={'/api/download/warning_letters.zip'} onClick={e=>{e.preventDefault();
+              fetch('/api/download/warning_letters.zip',{headers:{Authorization:'Bearer '+TOKEN}})
+                .then(r=>r.blob()).then(b=>{const u=URL.createObjectURL(b);
+                  const a=document.createElement('a');a.href=u;a.download='warning_letters.zip';a.click();});}}
+            className="px-5 py-2.5 rounded-xl border border-line bg-panel2 text-sm hover:border-cy/50">Download all (zip)</a>}
+      </Card>
+
+      {showSmtp && (
+        <Card cls="p-5">
+          <Label>outgoing mail (only needed to send for real)</Label>
+          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
+            {[['host','SMTP host'],['port','Port'],['user','From address'],
+              ['password','App password']].map(([k,ph])=>(
+              <input key={k} placeholder={ph} value={smtp[k]}
+                type={k==='password' ? 'password' : 'text'}
+                onChange={e=>setSmtp({...smtp,[k]:e.target.value})}
+                className="bg-panel2 border border-line rounded-xl px-4 py-2.5 outline-none focus:border-cy/60"/>))}
+          </div>
+          <div className="text-[12px] text-muted mt-3">
+            Nothing is stored on the server — the settings are used for this one call.
+            With Gmail you need an app password, not your normal one. Leave dry run on
+            until you have actually read a couple of the letters.
+          </div>
+        </Card>)}
+
+      {sent && (
+        <Card cls="p-5">
+          <Label>delivery result · {sent.dry_run ? 'dry run' : 'live send'}</Label>
+          <Table rows={sent.results} cols={[['roll','Roll'],['name','Student'],
+                                            ['to','Sent to'],['status','Status'],['note','Detail']]}
+            render={{status:v=><Pill tone={v==='sent'?'gr':v==='simulated'?'cy':'rd'}>{v}</Pill>}}/>
+        </Card>)}
+
+      {list && (
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
+          {list.map(l=>(
+            <Card key={l.roll} cls="p-4 hover:border-cy/40 cursor-pointer" >
+              <div onClick={()=>setOpen(l)}>
+                <div className="flex items-center justify-between gap-2">
+                  <div className="font-medium truncate">{l.name}</div>
+                  <div className="flex gap-1.5 shrink-0">
+                    {l.status && l.status !== 'draft' &&
+                      <Pill tone={l.status==='sent'?'gr':l.status==='simulated'?'cy':'rd'}>{l.status}</Pill>}
+                    <Pill tone="rd">{l.percent}%</Pill>
+                  </div>
+                </div>
+                <div className="font-mono text-[11px] text-muted mt-0.5">{l.roll}</div>
+                <div className="text-[12.5px] text-muted mt-3 line-clamp-3" style={{
+                  display:'-webkit-box', WebkitLineClamp:3, WebkitBoxOrient:'vertical', overflow:'hidden'}}>
+                  {l.body}
+                </div>
+                <div className="text-cy text-[12px] mt-3">read the letter →</div>
+              </div>
+            </Card>))}
+        </div>)}
+
+      {open && (
+        <div className="fixed inset-0 bg-black/70 grid place-items-center p-6 z-40" onClick={()=>setOpen(null)}>
+          <Card cls="max-w-2xl w-full p-6 soft fadein" >
+            <div className="flex items-start justify-between">
+              <div>
+                <div className="font-semibold text-lg">{open.name}</div>
+                <div className="font-mono text-[11px] text-muted">{open.roll} · {open.file}</div>
+              </div>
+              <button onClick={()=>setOpen(null)} className="text-muted hover:text-txt">✕</button>
+            </div>
+            <pre className="mt-5 whitespace-pre-wrap text-[13px] leading-relaxed bg-panel2 border border-line rounded-xl p-4 max-h-[55vh] overflow-auto">{open.body}</pre>
+          </Card>
+        </div>)}
+    </div>
+  );
+}
+
+function Reports({threshold, toast}) {
+  const [out,setOut] = useState(null), [busy,setBusy] = useState(false);
+
+  const gen = async () => {
+    setBusy(true);
+    try { setOut(await api(`/report?threshold=${threshold}`, {method:'POST'}));
+          toast('Report generated','gr'); }
+    catch(e){ toast(e.message,'rd'); }
+    setBusy(false);
+  };
+
+  const dl = (name) => {
+    fetch('/api/download/'+name, {headers:{Authorization:'Bearer '+TOKEN}})
+      .then(r=>r.blob()).then(b=>{ const u=URL.createObjectURL(b);
+        const a=document.createElement('a'); a.href=u; a.download=name; a.click(); });
+  };
+
+  return (
+    <div className="space-y-5 fadein">
+      <Card cls="p-5 flex flex-wrap items-center gap-4">
+        <div className="flex-1 min-w-[260px]">
+          <div className="font-semibold">Report agent</div>
+          <div className="text-muted text-[13px] mt-1">
+            Builds a four page PDF (summary, narrative, charts, anomalies, full register)
+            and a five sheet workbook, using the cut-off currently set in the top bar.
+          </div>
+        </div>
+        <button onClick={gen} disabled={busy}
+          className="px-5 py-2.5 rounded-xl font-semibold text-white bg-cy hover:brightness-110 disabled:opacity-50">
+          {busy ? 'building...' : 'Generate report'}</button>
+      </Card>
+
+      {out && (
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[[out.pdf,'PDF report','four pages, ready to print'],
+            [out.sheet,'Workbook','summary, students, subjects, forecast, anomalies']].map(([f,t,d])=>(
+            <Card key={f} cls="p-5 flex items-center gap-4">
+              <span className="text-cy"><Icon d={I.file} cls="w-7 h-7"/></span>
+              <div className="flex-1">
+                <div className="font-medium">{t}</div>
+                <div className="text-[12.5px] text-muted">{d}</div>
+                <div className="font-mono text-[11px] text-muted mt-1">{f}</div>
+              </div>
+              <button onClick={()=>dl(f)} className="px-4 py-2 rounded-xl border border-line bg-panel2 text-sm hover:border-cy/50">Download</button>
+            </Card>))}
+        </div>)}
+    </div>
+  );
+}
+
+function Audit({toast}) {
+  const [rows,setRows] = useState(null);
+  const load = async () => { try { setRows(await api('/audit?limit=250')); } catch(e){ toast(e.message,'rd'); } };
+  useEffect(() => { load(); }, []);
+  return (
+    <div className="space-y-4 fadein">
+      <Card cls="p-5">
+        <div className="flex items-center justify-between mb-3">
+          <Label>audit trail · every agent action and login</Label>
+          <button onClick={load} className="px-4 py-2 rounded-xl border border-line bg-panel2 text-sm hover:border-cy/50">Refresh</button>
+        </div>
+        {!rows ? <Skeleton/> :
+          <Table rows={rows} cols={[['ts','When'],['actor','Actor'],['agent','Agent'],
+                                    ['action','Action'],['params','Params'],['outcome','Outcome']]}
+            render={{agent:v=><Pill tone={v==='ToolCall'?'cy':v==='ToolResult'?'vi':v==='Auth'?'am':'mu'}>{v}</Pill>,
+                     ts:v=><span className="font-mono text-[11.5px] text-muted">{String(v).replace('T',' ')}</span>}}/>}
+      </Card>
+    </div>
+  );
+}
+
+function Console({theme}) {
+  return (
+    <div className="space-y-4 fadein">
+      <Card cls="p-5">
+        <div className="font-semibold">Gradio agent console</div>
+        <div className="text-muted text-[13px] mt-1">
+          The same supervisor and the same eleven tools, served by the same FastAPI
+          process and mounted at <code className="font-mono text-cy">/agent</code>.
+          Useful for debugging the tool layer without the ERP around it.
+        </div>
+      </Card>
+      <Card cls="overflow-hidden">
+        <iframe src={'/agent?__theme=' + theme} className="w-full"
+                style={{height:'72vh', border:0}}/>
+      </Card>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  shell                                                              */
+/* ------------------------------------------------------------------ */
+// what a teacher actually uses day to day
+const NAV = [
+  ['dashboard','Dashboard', I.dash],
+  ['mark','Mark attendance', I.mark],
+  ['assistant','Ask the assistant', I.bot],
+  ['students','Students', I.people],
+  ['subjects','Subjects', I.book],
+  ['exemptions','Exemptions', I.shield],
+  ['letters','Letters', I.mail],
+  ['reports','Reports', I.file],
+];
+// internals - hidden behind the developer switch, nobody teaching a class
+// needs to look at an audit table or a raw agent console
+const SYS_NAV = [
+  ['agents','Agent system', I.net],
+  ['audit','Activity log', I.log],
+  ['console','Agent console', I.term],
+];
+
+function App() {
+  const [me,setMe]       = useState(null);
+  const [page,setPage]   = useState('dashboard');
+  const [dash,setDash]   = useState(null);
+  const [subjects,setSubjects] = useState([]);
+  const [threshold,setTh]= useState(75);
+  const [apiKey,setKey]  = useState(localStorage.getItem('groq_key') || '');
+  const [showKey,setShowKey] = useState(false);
+  const [lastRun,setLastRun] = useState(null);
+  const [theme,setTheme] = useState(localStorage.getItem('attendx_theme')
+    || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+  const [dev,setDev] = useState(localStorage.getItem('attendx_dev') === '1');
+  const [navOpen,setNav] = useState(false);
+
+  // the palette must be on the <html> element BEFORE the charts read it,
+  // otherwise a theme switch leaves them painted in the old colours
+  const switchTheme = (t) => {
+    document.documentElement.dataset.theme = t;
+    localStorage.setItem('attendx_theme', t);
+    setTheme(t);
+  };
+  React.useLayoutEffect(() => { document.documentElement.dataset.theme = theme; }, []);
+  useEffect(() => { localStorage.setItem('attendx_dev', dev ? '1' : '0'); }, [dev]);
+  const [toastMsg,setToast] = useState(null);
+
+  const toast = (msg, tone='cy') => setToast({msg, tone, id:Date.now()});
+
+  const loadAll = useCallback(async () => {
+    try {
+      setDash(await api(`/dashboard?threshold=${threshold}`));
+      setSubjects(await api('/subjects'));
+    } catch(e) { toast(e.message,'rd'); }
+  }, [threshold]);
+
+  useEffect(() => {
+    if (!TOKEN) return;
+    api('/me').then(u => { setMe(u); }).catch(()=>{});
+  }, []);
+  useEffect(() => { if (me) loadAll(); }, [me, loadAll]);
+
+  const signOut = async () => {
+    try { await api('/logout',{method:'POST'}); } catch(e){}
+    TOKEN=''; localStorage.removeItem(TOKEN_KEY); window.location.reload();
+  };
+
+  if (!me) return (<>
+    <Login onIn={d=>{ setMe({...d, llm:false}); }}/>
+    {toastMsg && <Toast key={toastMsg.id} {...toastMsg} onDone={()=>setToast(null)}/>}
+  </>);
+
+  // a student gets a completely different, read-only app - no sidebar full of
+  // things they are not allowed to do
+  if (me.role === 'student') return (<>
+    <StudentApp me={me} theme={theme} switchTheme={switchTheme}
+                onOut={signOut} toast={toast}/>
+    {toastMsg && <Toast key={toastMsg.id} {...toastMsg} onDone={()=>setToast(null)}/>}
+  </>);
+
+  const title = (NAV.concat(SYS_NAV).find(n=>n[0]===page)||[])[1];
+  const navBtn = ([k,label,icon]) => (
+    <button key={k} onClick={()=>{ setPage(k); setNav(false); }}
+      className={'w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-[13.5px] transition '
+        + (page===k ? 'bg-cy/10 text-cy border border-cy/25'
+                    : 'text-muted hover:text-txt hover:bg-txt/[0.04] border border-transparent')}>
+      <Icon d={icon}/>{label}
+    </button>);
+
+  return (
+    <div className="min-h-screen flex">
+      {/* sidebar - slides in on a phone, fixed on a laptop */}
+      {navOpen && <div onClick={()=>setNav(false)}
+                       className="fixed inset-0 bg-black/50 z-40 lg:hidden"/>}
+      <aside className={'w-[236px] shrink-0 border-r border-line bg-panel2 flex flex-col '
+        + 'fixed lg:sticky top-0 h-screen z-50 transition-transform '
+        + (navOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0')}>
+        <div className="px-5 py-5 flex items-center gap-3 border-b border-line">
+          <div className="w-9 h-9 rounded-xl bg-cy grid place-items-center text-white font-bold">A</div>
+          <div>
+            <div className="font-bold leading-none">AttendX</div>
+            <div className="text-[10.5px] text-muted font-mono mt-1">attendance erp</div>
+          </div>
+        </div>
+
+        <nav className="p-3 space-y-1 flex-1 overflow-y-auto">
+          {NAV.map(navBtn)}
+          {dev && (<>
+            <div className="px-3 pt-4 pb-1.5 font-mono text-[10px] uppercase tracking-[1.4px] text-muted">
+              system
+            </div>
+            {SYS_NAV.map(navBtn)}
+          </>)}
+        </nav>
+
+        <div className="p-3 border-t border-line space-y-2">
+          <label className="flex items-center justify-between px-3 py-2 rounded-xl cursor-pointer hover:bg-txt/[0.04]">
+            <span className="text-[12.5px] text-muted">Developer view</span>
+            <input type="checkbox" checked={dev} onChange={e=>setDev(e.target.checked)}
+              className="w-4 h-4"/>
+          </label>
+          <div className="px-3 py-2.5 rounded-xl bg-panel border border-line">
+            <div className="text-[13px] font-medium truncate">{me.name}</div>
+            <div className="text-[11px] text-muted font-mono">{me.role}</div>
+          </div>
+          <button onClick={signOut}
+            className="mt-2 w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-[13.5px] text-muted hover:text-rd hover:bg-rd/5">
+            <Icon d={I.out}/>Sign out
+          </button>
+        </div>
+      </aside>
+
+      {/* main */}
+      <main className="flex-1 min-w-0">
+        <header className="sticky top-0 z-30 bg-ink/85 backdrop-blur border-b border-line px-6 py-3.5 flex flex-wrap items-center gap-4">
+          <button onClick={()=>setNav(true)} aria-label="open the menu"
+            className="lg:hidden px-2.5 py-2 rounded-xl border border-line text-muted">
+            <Icon d={I.menu}/></button>
+          <div>
+            <div className="text-[17px] font-semibold leading-none">{title}</div>
+            {dash && <div className="text-[11.5px] text-muted font-mono mt-1.5">
+              {dash.stats.from} → {dash.stats.to} · {dash.stats.records} records · {dash.stats.subjects} subjects
+            </div>}
+          </div>
+
+          <div className="ml-auto flex items-center gap-3">
+            <div className="flex items-center gap-2 bg-panel border border-line rounded-xl px-3 py-2">
+              <span className="text-[11px] font-mono uppercase text-muted">cut-off</span>
+              <input type="range" min="50" max="90" value={threshold}
+                onChange={e=>setTh(+e.target.value)} className="w-24"/>
+              <span className="text-cy font-semibold text-sm w-9">{threshold}%</span>
+            </div>
+
+            <button onClick={()=>switchTheme(theme==='dark'?'light':'dark')}
+              title="switch theme"
+              className="px-3 py-2 rounded-xl border border-line bg-panel text-muted hover:text-txt text-[12px] flex items-center gap-2">
+              <Icon d={theme==='dark'
+                ? 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.36 6.36l-.7-.7M6.34 6.34l-.7-.7m12.72 0l-.7.7M6.34 17.66l-.7.7M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                : 'M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z'} cls="w-4 h-4"/>
+              {theme==='dark' ? 'Light' : 'Dark'}
+            </button>
+
+            <button onClick={()=>setShowKey(!showKey)}
+              className={'px-3 py-2 rounded-xl border text-[12px] '
+                + (apiKey ? 'border-gr/40 text-gr bg-gr/10' : 'border-line text-muted bg-panel')}>
+              {apiKey ? 'AI: connected' : 'AI: offline'}
+            </button>
+          </div>
+
+          {showKey && (
+            <div className="w-full flex gap-2 items-center pt-1">
+              <input type="password" value={apiKey} placeholder="paste a Groq API key to drive the agents with an LLM"
+                onChange={e=>{setKey(e.target.value); localStorage.setItem('groq_key', e.target.value);}}
+                className="flex-1 bg-panel2 border border-line rounded-xl px-4 py-2.5 text-sm outline-none focus:border-cy/60"/>
+              <button onClick={async ()=>{
+                  try { const r = await api('/agent/test',{method:'POST',body:{question:'test',api_key:apiKey}});
+                        toast(r.ok ? `Groq connected · ${r.model} · ${r.ms} ms` : r.error, r.ok?'gr':'rd'); }
+                  catch(e){ toast(e.message,'rd'); }}}
+                className="px-4 py-2.5 rounded-xl border border-cy/40 bg-cy/10 text-cy text-sm">Test key</button>
+              <button onClick={()=>setShowKey(false)} className="px-4 py-2.5 rounded-xl border border-line bg-panel2 text-sm">Done</button>
+            </div>)}
+        </header>
+
+        <div className="p-6">
+          {page==='dashboard' && <Dashboard data={dash} threshold={threshold} theme={theme}/>}
+          {page==='mark'      && <MarkAttendance subjects={subjects} toast={toast} reload={loadAll} dash={dash}/>}
+          {page==='assistant' && <Assistant threshold={threshold} apiKey={apiKey} toast={toast} reload={loadAll} setLastRun={setLastRun}/>}
+          {page==='agents'    && <Agents lastRun={lastRun} apiKey={apiKey} toast={toast}/>}
+          {page==='students'  && <Students me={me} dash={dash} toast={toast}/>}
+          {page==='subjects'  && <Subjects me={me} dash={dash} toast={toast}/>}
+          {page==='exemptions'&& <Exemptions me={me} toast={toast} reload={loadAll}/>}
+          {page==='letters'   && <Letters threshold={threshold} toast={toast}/>}
+          {page==='reports'   && <Reports threshold={threshold} toast={toast}/>}
+          {page==='audit'     && <Audit toast={toast}/>}
+          {page==='console'   && <Console theme={theme}/>}
+        </div>
+      </main>
+
+      {toastMsg && <Toast key={toastMsg.id} {...toastMsg} onDone={()=>setToast(null)}/>}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

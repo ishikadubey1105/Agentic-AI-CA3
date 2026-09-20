@@ -1,0 +1,38 @@
+# --- runtime data: never commit the database or generated output ---------
+data/
+outputs/
+*.db
+*.sqlite3
+
+# generated reports, charts and letters
+*.pdf
+*.xlsx
+warning_letters.zip
+letters/
+
+# --- python --------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- secrets -------------------------------------------------------------
+# the Groq key is never written to a file by the app, keep it that way
+.env
+*.key
+secrets.json
+
+# --- editors and OS ------------------------------------------------------
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- keep the vendored browser libraries --------------------------------
+# frontend/vendor/*.js is committed on purpose: it is what lets the app run
+# with no internet. Do not add it here.

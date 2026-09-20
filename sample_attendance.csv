@@ -1,0 +1,2611 @@
+Date,RollNo,Name,Subject,Status
+2026-07-01,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-01,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-01,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-01,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-01,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-01,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-01,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-01,23CS108,Priya Nair,Agentic AI,Present
+2026-07-01,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-01,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-01,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-01,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-01,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-01,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-01,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-01,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-01,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-01,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-01,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-01,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-01,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-01,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-01,23CS108,Priya Nair,Machine Learning,Present
+2026-07-01,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-07-01,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-01,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-01,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-01,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-01,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-01,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-01,23CS101,Aarav Sharma,DBMS,Present
+2026-07-01,23CS102,Ishika Dubey,DBMS,Present
+2026-07-01,23CS103,Rohan Patil,DBMS,Present
+2026-07-01,23CS104,Sneha Iyer,DBMS,Absent
+2026-07-01,23CS105,Kabir Mehta,DBMS,Present
+2026-07-01,23CS106,Ananya Rao,DBMS,Absent
+2026-07-01,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-01,23CS108,Priya Nair,DBMS,Present
+2026-07-01,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-01,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-01,23CS111,Yash Agarwal,DBMS,Present
+2026-07-01,23CS112,Meera Pillai,DBMS,Absent
+2026-07-01,23CS113,Nikhil Verma,DBMS,Absent
+2026-07-01,23CS114,Riya Bansal,DBMS,Present
+2026-07-01,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-01,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-01,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-07-01,23CS103,Rohan Patil,Soft Skills,Absent
+2026-07-01,23CS104,Sneha Iyer,Soft Skills,Present
+2026-07-01,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-01,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-01,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-01,23CS108,Priya Nair,Soft Skills,Present
+2026-07-01,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-01,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-01,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-01,23CS112,Meera Pillai,Soft Skills,Absent
+2026-07-01,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-01,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-01,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-02,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-02,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-07-02,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-02,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-02,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-02,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-02,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-02,23CS108,Priya Nair,Machine Learning,Present
+2026-07-02,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-07-02,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-02,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-02,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-02,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-02,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-02,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-02,23CS101,Aarav Sharma,DBMS,Present
+2026-07-02,23CS102,Ishika Dubey,DBMS,Present
+2026-07-02,23CS103,Rohan Patil,DBMS,Present
+2026-07-02,23CS104,Sneha Iyer,DBMS,Present
+2026-07-02,23CS105,Kabir Mehta,DBMS,Absent
+2026-07-02,23CS106,Ananya Rao,DBMS,Present
+2026-07-02,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-02,23CS108,Priya Nair,DBMS,Present
+2026-07-02,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-02,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-02,23CS111,Yash Agarwal,DBMS,Absent
+2026-07-02,23CS112,Meera Pillai,DBMS,Present
+2026-07-02,23CS113,Nikhil Verma,DBMS,Present
+2026-07-02,23CS114,Riya Bansal,DBMS,Absent
+2026-07-02,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-02,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-02,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-02,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-02,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-02,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-02,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-02,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-02,23CS108,Priya Nair,Computer Networks,Present
+2026-07-02,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-02,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-02,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-02,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-02,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-02,23CS114,Riya Bansal,Computer Networks,Absent
+2026-07-02,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-03,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-03,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-03,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-03,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-03,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-03,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-03,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-03,23CS108,Priya Nair,Agentic AI,Present
+2026-07-03,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-03,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-03,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-07-03,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-03,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-03,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-03,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-03,23CS101,Aarav Sharma,DBMS,Present
+2026-07-03,23CS102,Ishika Dubey,DBMS,Present
+2026-07-03,23CS103,Rohan Patil,DBMS,Absent
+2026-07-03,23CS104,Sneha Iyer,DBMS,Absent
+2026-07-03,23CS105,Kabir Mehta,DBMS,Present
+2026-07-03,23CS106,Ananya Rao,DBMS,Present
+2026-07-03,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-03,23CS108,Priya Nair,DBMS,Present
+2026-07-03,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-03,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-03,23CS111,Yash Agarwal,DBMS,Absent
+2026-07-03,23CS112,Meera Pillai,DBMS,Present
+2026-07-03,23CS113,Nikhil Verma,DBMS,Present
+2026-07-03,23CS114,Riya Bansal,DBMS,Absent
+2026-07-03,23CS115,Omkar Jadhav,DBMS,Absent
+2026-07-03,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-03,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-03,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-03,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-03,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-03,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-03,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-03,23CS108,Priya Nair,Computer Networks,Present
+2026-07-03,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-03,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-03,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-07-03,23CS112,Meera Pillai,Computer Networks,Absent
+2026-07-03,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-03,23CS114,Riya Bansal,Computer Networks,Absent
+2026-07-03,23CS115,Omkar Jadhav,Computer Networks,Absent
+2026-07-03,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-03,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-03,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-03,23CS104,Sneha Iyer,Soft Skills,Present
+2026-07-03,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-03,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-03,23CS107,Vivek Kulkarni,Soft Skills,Absent
+2026-07-03,23CS108,Priya Nair,Soft Skills,Absent
+2026-07-03,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-03,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-03,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-07-03,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-03,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-03,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-03,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-07-06,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-06,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-06,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-06,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-06,23CS105,Kabir Mehta,Agentic AI,Absent
+2026-07-06,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-06,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-06,23CS108,Priya Nair,Agentic AI,Absent
+2026-07-06,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-06,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-06,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-06,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-06,23CS113,Nikhil Verma,Agentic AI,Absent
+2026-07-06,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-06,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-06,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-07-06,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-06,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-06,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-06,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-06,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-06,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-07-06,23CS108,Priya Nair,Machine Learning,Present
+2026-07-06,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-06,23CS110,Tanvi Joshi,Machine Learning,Absent
+2026-07-06,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-06,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-06,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-06,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-06,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-06,23CS101,Aarav Sharma,DBMS,Present
+2026-07-06,23CS102,Ishika Dubey,DBMS,Present
+2026-07-06,23CS103,Rohan Patil,DBMS,Present
+2026-07-06,23CS104,Sneha Iyer,DBMS,Present
+2026-07-06,23CS105,Kabir Mehta,DBMS,Present
+2026-07-06,23CS106,Ananya Rao,DBMS,Absent
+2026-07-06,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-06,23CS108,Priya Nair,DBMS,Present
+2026-07-06,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-06,23CS110,Tanvi Joshi,DBMS,Absent
+2026-07-06,23CS111,Yash Agarwal,DBMS,Present
+2026-07-06,23CS112,Meera Pillai,DBMS,Absent
+2026-07-06,23CS113,Nikhil Verma,DBMS,Present
+2026-07-06,23CS114,Riya Bansal,DBMS,Present
+2026-07-06,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-06,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-06,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-06,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-06,23CS104,Sneha Iyer,Soft Skills,Present
+2026-07-06,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-06,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-06,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-06,23CS108,Priya Nair,Soft Skills,Present
+2026-07-06,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-06,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-06,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-07-06,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-06,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-06,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-06,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-07,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-07,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-07,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-07,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-07,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-07,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-07,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-07,23CS108,Priya Nair,Agentic AI,Present
+2026-07-07,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-07,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-07,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-07,23CS112,Meera Pillai,Agentic AI,Absent
+2026-07-07,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-07,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-07,23CS115,Omkar Jadhav,Agentic AI,Absent
+2026-07-07,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-07,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-07-07,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-07,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-07,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-07,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-07,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-07,23CS108,Priya Nair,Machine Learning,Present
+2026-07-07,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-07,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-07,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-07-07,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-07,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-07,23CS114,Riya Bansal,Machine Learning,Absent
+2026-07-07,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-07,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-07-07,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-07,23CS103,Rohan Patil,Computer Networks,Absent
+2026-07-07,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-07,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-07,23CS106,Ananya Rao,Computer Networks,Absent
+2026-07-07,23CS107,Vivek Kulkarni,Computer Networks,Absent
+2026-07-07,23CS108,Priya Nair,Computer Networks,Present
+2026-07-07,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-07,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-07,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-07,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-07,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-07,23CS114,Riya Bansal,Computer Networks,Absent
+2026-07-07,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-07,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-07,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-07,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-07,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-07,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-07,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-07,23CS107,Vivek Kulkarni,Soft Skills,Absent
+2026-07-07,23CS108,Priya Nair,Soft Skills,Present
+2026-07-07,23CS109,Arjun Deshmukh,Soft Skills,Absent
+2026-07-07,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-07,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-07,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-07,23CS113,Nikhil Verma,Soft Skills,Absent
+2026-07-07,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-07,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-08,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-08,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-08,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-08,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-08,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-08,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-08,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-08,23CS108,Priya Nair,Agentic AI,Present
+2026-07-08,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-08,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-08,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-08,23CS112,Meera Pillai,Agentic AI,Absent
+2026-07-08,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-08,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-08,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-08,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-08,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-07-08,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-08,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-08,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-08,23CS106,Ananya Rao,Machine Learning,Absent
+2026-07-08,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-08,23CS108,Priya Nair,Machine Learning,Present
+2026-07-08,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-08,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-08,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-08,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-08,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-08,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-08,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-08,23CS101,Aarav Sharma,DBMS,Present
+2026-07-08,23CS102,Ishika Dubey,DBMS,Present
+2026-07-08,23CS103,Rohan Patil,DBMS,Present
+2026-07-08,23CS104,Sneha Iyer,DBMS,Present
+2026-07-08,23CS105,Kabir Mehta,DBMS,Present
+2026-07-08,23CS106,Ananya Rao,DBMS,Present
+2026-07-08,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-08,23CS108,Priya Nair,DBMS,Present
+2026-07-08,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-08,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-08,23CS111,Yash Agarwal,DBMS,Present
+2026-07-08,23CS112,Meera Pillai,DBMS,Present
+2026-07-08,23CS113,Nikhil Verma,DBMS,Absent
+2026-07-08,23CS114,Riya Bansal,DBMS,Present
+2026-07-08,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-08,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-08,23CS102,Ishika Dubey,Computer Networks,Absent
+2026-07-08,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-08,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-08,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-08,23CS106,Ananya Rao,Computer Networks,Absent
+2026-07-08,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-08,23CS108,Priya Nair,Computer Networks,Present
+2026-07-08,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-08,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-08,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-08,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-08,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-08,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-08,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-08,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-08,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-08,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-08,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-08,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-07-08,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-08,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-08,23CS108,Priya Nair,Soft Skills,Present
+2026-07-08,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-08,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-08,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-08,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-08,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-08,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-08,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-07-09,23CS101,Aarav Sharma,Agentic AI,Absent
+2026-07-09,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-09,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-09,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-09,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-09,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-09,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-09,23CS108,Priya Nair,Agentic AI,Present
+2026-07-09,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-09,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-09,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-09,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-09,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-09,23CS114,Riya Bansal,Agentic AI,Present
+2026-07-09,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-09,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-09,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-09,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-09,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-09,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-09,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-09,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-07-09,23CS108,Priya Nair,Machine Learning,Present
+2026-07-09,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-09,23CS110,Tanvi Joshi,Machine Learning,Absent
+2026-07-09,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-09,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-09,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-09,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-09,23CS115,Omkar Jadhav,Machine Learning,Absent
+2026-07-09,23CS101,Aarav Sharma,DBMS,Present
+2026-07-09,23CS102,Ishika Dubey,DBMS,Present
+2026-07-09,23CS103,Rohan Patil,DBMS,Present
+2026-07-09,23CS104,Sneha Iyer,DBMS,Present
+2026-07-09,23CS105,Kabir Mehta,DBMS,Present
+2026-07-09,23CS106,Ananya Rao,DBMS,Present
+2026-07-09,23CS107,Vivek Kulkarni,DBMS,Absent
+2026-07-09,23CS108,Priya Nair,DBMS,Present
+2026-07-09,23CS109,Arjun Deshmukh,DBMS,Absent
+2026-07-09,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-09,23CS111,Yash Agarwal,DBMS,Absent
+2026-07-09,23CS112,Meera Pillai,DBMS,Present
+2026-07-09,23CS113,Nikhil Verma,DBMS,Present
+2026-07-09,23CS114,Riya Bansal,DBMS,Present
+2026-07-09,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-09,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-09,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-07-09,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-09,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-09,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-09,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-09,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-09,23CS108,Priya Nair,Soft Skills,Present
+2026-07-09,23CS109,Arjun Deshmukh,Soft Skills,Absent
+2026-07-09,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-09,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-07-09,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-09,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-09,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-09,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-07-10,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-10,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-10,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-10,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-10,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-10,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-10,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-10,23CS108,Priya Nair,Machine Learning,Present
+2026-07-10,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-10,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-10,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-07-10,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-10,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-10,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-10,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-10,23CS101,Aarav Sharma,DBMS,Present
+2026-07-10,23CS102,Ishika Dubey,DBMS,Present
+2026-07-10,23CS103,Rohan Patil,DBMS,Present
+2026-07-10,23CS104,Sneha Iyer,DBMS,Present
+2026-07-10,23CS105,Kabir Mehta,DBMS,Present
+2026-07-10,23CS106,Ananya Rao,DBMS,Present
+2026-07-10,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-10,23CS108,Priya Nair,DBMS,Present
+2026-07-10,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-10,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-10,23CS111,Yash Agarwal,DBMS,Present
+2026-07-10,23CS112,Meera Pillai,DBMS,Present
+2026-07-10,23CS113,Nikhil Verma,DBMS,Absent
+2026-07-10,23CS114,Riya Bansal,DBMS,Present
+2026-07-10,23CS115,Omkar Jadhav,DBMS,Absent
+2026-07-10,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-10,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-10,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-10,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-07-10,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-10,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-10,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-10,23CS108,Priya Nair,Computer Networks,Absent
+2026-07-10,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-10,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-10,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-10,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-10,23CS113,Nikhil Verma,Computer Networks,Absent
+2026-07-10,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-10,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-10,23CS101,Aarav Sharma,Soft Skills,Absent
+2026-07-10,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-10,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-10,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-10,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-10,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-10,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-10,23CS108,Priya Nair,Soft Skills,Present
+2026-07-10,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-10,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-10,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-10,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-10,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-10,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-10,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-13,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-13,23CS102,Ishika Dubey,Agentic AI,Absent
+2026-07-13,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-13,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-13,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-13,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-13,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-13,23CS108,Priya Nair,Agentic AI,Absent
+2026-07-13,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-13,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-13,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-13,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-13,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-13,23CS114,Riya Bansal,Agentic AI,Present
+2026-07-13,23CS115,Omkar Jadhav,Agentic AI,Absent
+2026-07-13,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-07-13,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-13,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-13,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-13,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-13,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-13,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-07-13,23CS108,Priya Nair,Machine Learning,Present
+2026-07-13,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-07-13,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-13,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-07-13,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-13,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-13,23CS114,Riya Bansal,Machine Learning,Absent
+2026-07-13,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-13,23CS101,Aarav Sharma,DBMS,Present
+2026-07-13,23CS102,Ishika Dubey,DBMS,Present
+2026-07-13,23CS103,Rohan Patil,DBMS,Present
+2026-07-13,23CS104,Sneha Iyer,DBMS,Present
+2026-07-13,23CS105,Kabir Mehta,DBMS,Present
+2026-07-13,23CS106,Ananya Rao,DBMS,Absent
+2026-07-13,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-13,23CS108,Priya Nair,DBMS,Present
+2026-07-13,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-13,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-13,23CS111,Yash Agarwal,DBMS,Absent
+2026-07-13,23CS112,Meera Pillai,DBMS,Absent
+2026-07-13,23CS113,Nikhil Verma,DBMS,Present
+2026-07-13,23CS114,Riya Bansal,DBMS,Absent
+2026-07-13,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-13,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-13,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-13,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-13,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-13,23CS105,Kabir Mehta,Computer Networks,Absent
+2026-07-13,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-13,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-13,23CS108,Priya Nair,Computer Networks,Absent
+2026-07-13,23CS109,Arjun Deshmukh,Computer Networks,Absent
+2026-07-13,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-13,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-13,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-13,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-13,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-13,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-13,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-13,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-13,23CS103,Rohan Patil,Soft Skills,Absent
+2026-07-13,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-13,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-13,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-13,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-13,23CS108,Priya Nair,Soft Skills,Present
+2026-07-13,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-13,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-13,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-13,23CS112,Meera Pillai,Soft Skills,Absent
+2026-07-13,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-13,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-13,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-14,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-14,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-14,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-14,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-14,23CS105,Kabir Mehta,Agentic AI,Absent
+2026-07-14,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-14,23CS107,Vivek Kulkarni,Agentic AI,Absent
+2026-07-14,23CS108,Priya Nair,Agentic AI,Present
+2026-07-14,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-14,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-14,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-07-14,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-14,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-14,23CS114,Riya Bansal,Agentic AI,Present
+2026-07-14,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-14,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-07-14,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-07-14,23CS103,Rohan Patil,Machine Learning,Absent
+2026-07-14,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-14,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-14,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-14,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-14,23CS108,Priya Nair,Machine Learning,Present
+2026-07-14,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-07-14,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-14,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-07-14,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-14,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-14,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-14,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-14,23CS101,Aarav Sharma,DBMS,Present
+2026-07-14,23CS102,Ishika Dubey,DBMS,Absent
+2026-07-14,23CS103,Rohan Patil,DBMS,Present
+2026-07-14,23CS104,Sneha Iyer,DBMS,Present
+2026-07-14,23CS105,Kabir Mehta,DBMS,Present
+2026-07-14,23CS106,Ananya Rao,DBMS,Present
+2026-07-14,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-14,23CS108,Priya Nair,DBMS,Present
+2026-07-14,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-14,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-14,23CS111,Yash Agarwal,DBMS,Present
+2026-07-14,23CS112,Meera Pillai,DBMS,Present
+2026-07-14,23CS113,Nikhil Verma,DBMS,Present
+2026-07-14,23CS114,Riya Bansal,DBMS,Present
+2026-07-14,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-14,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-14,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-07-14,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-14,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-14,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-14,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-14,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-14,23CS108,Priya Nair,Soft Skills,Absent
+2026-07-14,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-14,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-14,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-14,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-14,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-14,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-14,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-15,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-15,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-15,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-15,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-15,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-15,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-15,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-15,23CS108,Priya Nair,Agentic AI,Present
+2026-07-15,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-15,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-15,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-07-15,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-15,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-15,23CS114,Riya Bansal,Agentic AI,Present
+2026-07-15,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-15,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-15,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-07-15,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-15,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-15,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-15,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-15,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-15,23CS108,Priya Nair,Machine Learning,Absent
+2026-07-15,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-15,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-15,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-15,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-15,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-15,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-15,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-15,23CS101,Aarav Sharma,DBMS,Absent
+2026-07-15,23CS102,Ishika Dubey,DBMS,Absent
+2026-07-15,23CS103,Rohan Patil,DBMS,Present
+2026-07-15,23CS104,Sneha Iyer,DBMS,Absent
+2026-07-15,23CS105,Kabir Mehta,DBMS,Absent
+2026-07-15,23CS106,Ananya Rao,DBMS,Present
+2026-07-15,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-15,23CS108,Priya Nair,DBMS,Absent
+2026-07-15,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-15,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-15,23CS111,Yash Agarwal,DBMS,Absent
+2026-07-15,23CS112,Meera Pillai,DBMS,Present
+2026-07-15,23CS113,Nikhil Verma,DBMS,Present
+2026-07-15,23CS114,Riya Bansal,DBMS,Present
+2026-07-15,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-15,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-15,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-07-15,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-15,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-15,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-15,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-15,23CS107,Vivek Kulkarni,Soft Skills,Absent
+2026-07-15,23CS108,Priya Nair,Soft Skills,Absent
+2026-07-15,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-15,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-15,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-07-15,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-15,23CS113,Nikhil Verma,Soft Skills,Absent
+2026-07-15,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-15,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-16,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-07-16,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-16,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-16,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-16,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-16,23CS106,Ananya Rao,Machine Learning,Absent
+2026-07-16,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-16,23CS108,Priya Nair,Machine Learning,Present
+2026-07-16,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-07-16,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-16,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-16,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-16,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-16,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-16,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-16,23CS101,Aarav Sharma,DBMS,Present
+2026-07-16,23CS102,Ishika Dubey,DBMS,Present
+2026-07-16,23CS103,Rohan Patil,DBMS,Present
+2026-07-16,23CS104,Sneha Iyer,DBMS,Absent
+2026-07-16,23CS105,Kabir Mehta,DBMS,Present
+2026-07-16,23CS106,Ananya Rao,DBMS,Absent
+2026-07-16,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-16,23CS108,Priya Nair,DBMS,Present
+2026-07-16,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-16,23CS110,Tanvi Joshi,DBMS,Absent
+2026-07-16,23CS111,Yash Agarwal,DBMS,Absent
+2026-07-16,23CS112,Meera Pillai,DBMS,Present
+2026-07-16,23CS113,Nikhil Verma,DBMS,Present
+2026-07-16,23CS114,Riya Bansal,DBMS,Present
+2026-07-16,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-16,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-16,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-16,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-16,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-07-16,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-16,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-16,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-16,23CS108,Priya Nair,Computer Networks,Present
+2026-07-16,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-16,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-16,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-16,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-16,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-16,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-16,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-17,23CS101,Aarav Sharma,Agentic AI,Absent
+2026-07-17,23CS102,Ishika Dubey,Agentic AI,Absent
+2026-07-17,23CS103,Rohan Patil,Agentic AI,Absent
+2026-07-17,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-17,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-17,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-17,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-17,23CS108,Priya Nair,Agentic AI,Present
+2026-07-17,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-17,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-17,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-17,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-17,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-17,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-17,23CS115,Omkar Jadhav,Agentic AI,Absent
+2026-07-17,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-17,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-07-17,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-17,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-17,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-17,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-17,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-17,23CS108,Priya Nair,Machine Learning,Present
+2026-07-17,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-17,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-17,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-07-17,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-17,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-17,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-17,23CS115,Omkar Jadhav,Machine Learning,Absent
+2026-07-17,23CS101,Aarav Sharma,DBMS,Present
+2026-07-17,23CS102,Ishika Dubey,DBMS,Present
+2026-07-17,23CS103,Rohan Patil,DBMS,Present
+2026-07-17,23CS104,Sneha Iyer,DBMS,Absent
+2026-07-17,23CS105,Kabir Mehta,DBMS,Present
+2026-07-17,23CS106,Ananya Rao,DBMS,Present
+2026-07-17,23CS107,Vivek Kulkarni,DBMS,Absent
+2026-07-17,23CS108,Priya Nair,DBMS,Present
+2026-07-17,23CS109,Arjun Deshmukh,DBMS,Absent
+2026-07-17,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-17,23CS111,Yash Agarwal,DBMS,Present
+2026-07-17,23CS112,Meera Pillai,DBMS,Present
+2026-07-17,23CS113,Nikhil Verma,DBMS,Present
+2026-07-17,23CS114,Riya Bansal,DBMS,Absent
+2026-07-17,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-17,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-17,23CS102,Ishika Dubey,Computer Networks,Absent
+2026-07-17,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-17,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-17,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-17,23CS106,Ananya Rao,Computer Networks,Absent
+2026-07-17,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-17,23CS108,Priya Nair,Computer Networks,Present
+2026-07-17,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-17,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-17,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-17,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-17,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-17,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-17,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-17,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-17,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-17,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-17,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-17,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-17,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-17,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-17,23CS108,Priya Nair,Soft Skills,Absent
+2026-07-17,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-17,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-17,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-17,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-17,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-17,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-17,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-20,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-20,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-20,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-20,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-20,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-20,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-20,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-20,23CS108,Priya Nair,Agentic AI,Present
+2026-07-20,23CS109,Arjun Deshmukh,Agentic AI,Absent
+2026-07-20,23CS110,Tanvi Joshi,Agentic AI,Absent
+2026-07-20,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-20,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-20,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-20,23CS114,Riya Bansal,Agentic AI,Present
+2026-07-20,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-20,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-20,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-20,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-20,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-20,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-20,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-20,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-20,23CS108,Priya Nair,Machine Learning,Present
+2026-07-20,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-20,23CS110,Tanvi Joshi,Machine Learning,Absent
+2026-07-20,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-20,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-20,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-20,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-20,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-20,23CS101,Aarav Sharma,DBMS,Present
+2026-07-20,23CS102,Ishika Dubey,DBMS,Absent
+2026-07-20,23CS103,Rohan Patil,DBMS,Present
+2026-07-20,23CS104,Sneha Iyer,DBMS,Present
+2026-07-20,23CS105,Kabir Mehta,DBMS,Present
+2026-07-20,23CS106,Ananya Rao,DBMS,Absent
+2026-07-20,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-20,23CS108,Priya Nair,DBMS,Present
+2026-07-20,23CS109,Arjun Deshmukh,DBMS,Absent
+2026-07-20,23CS110,Tanvi Joshi,DBMS,Absent
+2026-07-20,23CS111,Yash Agarwal,DBMS,Present
+2026-07-20,23CS112,Meera Pillai,DBMS,Present
+2026-07-20,23CS113,Nikhil Verma,DBMS,Absent
+2026-07-20,23CS114,Riya Bansal,DBMS,Present
+2026-07-20,23CS115,Omkar Jadhav,DBMS,Absent
+2026-07-20,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-07-20,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-20,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-20,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-20,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-20,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-20,23CS107,Vivek Kulkarni,Computer Networks,Absent
+2026-07-20,23CS108,Priya Nair,Computer Networks,Present
+2026-07-20,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-20,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-20,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-20,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-20,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-20,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-20,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-20,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-20,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-20,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-20,23CS104,Sneha Iyer,Soft Skills,Present
+2026-07-20,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-07-20,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-20,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-20,23CS108,Priya Nair,Soft Skills,Present
+2026-07-20,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-20,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-20,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-20,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-20,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-20,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-20,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-21,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-21,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-21,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-21,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-21,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-21,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-21,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-21,23CS108,Priya Nair,Machine Learning,Present
+2026-07-21,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-21,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-21,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-21,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-21,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-21,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-21,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-21,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-07-21,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-21,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-21,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-21,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-21,23CS106,Ananya Rao,Computer Networks,Absent
+2026-07-21,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-21,23CS108,Priya Nair,Computer Networks,Present
+2026-07-21,23CS109,Arjun Deshmukh,Computer Networks,Absent
+2026-07-21,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-21,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-07-21,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-21,23CS113,Nikhil Verma,Computer Networks,Absent
+2026-07-21,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-21,23CS115,Omkar Jadhav,Computer Networks,Absent
+2026-07-21,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-21,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-07-21,23CS103,Rohan Patil,Soft Skills,Absent
+2026-07-21,23CS104,Sneha Iyer,Soft Skills,Present
+2026-07-21,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-21,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-21,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-21,23CS108,Priya Nair,Soft Skills,Absent
+2026-07-21,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-21,23CS110,Tanvi Joshi,Soft Skills,Absent
+2026-07-21,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-21,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-21,23CS113,Nikhil Verma,Soft Skills,Absent
+2026-07-21,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-21,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-22,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-22,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-22,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-22,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-22,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-22,23CS106,Ananya Rao,Agentic AI,Absent
+2026-07-22,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-22,23CS108,Priya Nair,Agentic AI,Present
+2026-07-22,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-22,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-22,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-07-22,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-22,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-22,23CS114,Riya Bansal,Agentic AI,Present
+2026-07-22,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-22,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-22,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-07-22,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-22,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-22,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-22,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-22,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-07-22,23CS108,Priya Nair,Machine Learning,Present
+2026-07-22,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-22,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-22,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-22,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-22,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-22,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-22,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-22,23CS101,Aarav Sharma,DBMS,Present
+2026-07-22,23CS102,Ishika Dubey,DBMS,Absent
+2026-07-22,23CS103,Rohan Patil,DBMS,Present
+2026-07-22,23CS104,Sneha Iyer,DBMS,Absent
+2026-07-22,23CS105,Kabir Mehta,DBMS,Present
+2026-07-22,23CS106,Ananya Rao,DBMS,Present
+2026-07-22,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-22,23CS108,Priya Nair,DBMS,Present
+2026-07-22,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-22,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-22,23CS111,Yash Agarwal,DBMS,Present
+2026-07-22,23CS112,Meera Pillai,DBMS,Absent
+2026-07-22,23CS113,Nikhil Verma,DBMS,Present
+2026-07-22,23CS114,Riya Bansal,DBMS,Present
+2026-07-22,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-23,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-23,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-23,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-23,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-23,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-23,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-23,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-23,23CS108,Priya Nair,Machine Learning,Absent
+2026-07-23,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-23,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-23,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-23,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-23,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-23,23CS114,Riya Bansal,Machine Learning,Absent
+2026-07-23,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-23,23CS101,Aarav Sharma,DBMS,Present
+2026-07-23,23CS102,Ishika Dubey,DBMS,Present
+2026-07-23,23CS103,Rohan Patil,DBMS,Present
+2026-07-23,23CS104,Sneha Iyer,DBMS,Present
+2026-07-23,23CS105,Kabir Mehta,DBMS,Present
+2026-07-23,23CS106,Ananya Rao,DBMS,Present
+2026-07-23,23CS107,Vivek Kulkarni,DBMS,Absent
+2026-07-23,23CS108,Priya Nair,DBMS,Present
+2026-07-23,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-23,23CS110,Tanvi Joshi,DBMS,Absent
+2026-07-23,23CS111,Yash Agarwal,DBMS,Present
+2026-07-23,23CS112,Meera Pillai,DBMS,Present
+2026-07-23,23CS113,Nikhil Verma,DBMS,Present
+2026-07-23,23CS114,Riya Bansal,DBMS,Present
+2026-07-23,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-23,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-23,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-23,23CS103,Rohan Patil,Computer Networks,Absent
+2026-07-23,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-23,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-23,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-23,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-23,23CS108,Priya Nair,Computer Networks,Present
+2026-07-23,23CS109,Arjun Deshmukh,Computer Networks,Absent
+2026-07-23,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-23,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-23,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-23,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-23,23CS114,Riya Bansal,Computer Networks,Absent
+2026-07-23,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-23,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-23,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-07-23,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-23,23CS104,Sneha Iyer,Soft Skills,Present
+2026-07-23,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-07-23,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-23,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-23,23CS108,Priya Nair,Soft Skills,Present
+2026-07-23,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-23,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-23,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-23,23CS112,Meera Pillai,Soft Skills,Absent
+2026-07-23,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-23,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-23,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-24,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-24,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-24,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-24,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-24,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-24,23CS106,Ananya Rao,Agentic AI,Absent
+2026-07-24,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-24,23CS108,Priya Nair,Agentic AI,Present
+2026-07-24,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-24,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-24,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-24,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-24,23CS113,Nikhil Verma,Agentic AI,Absent
+2026-07-24,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-24,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-24,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-24,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-24,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-24,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-24,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-24,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-24,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-07-24,23CS108,Priya Nair,Machine Learning,Present
+2026-07-24,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-07-24,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-24,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-07-24,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-24,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-24,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-24,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-24,23CS101,Aarav Sharma,DBMS,Present
+2026-07-24,23CS102,Ishika Dubey,DBMS,Present
+2026-07-24,23CS103,Rohan Patil,DBMS,Present
+2026-07-24,23CS104,Sneha Iyer,DBMS,Present
+2026-07-24,23CS105,Kabir Mehta,DBMS,Present
+2026-07-24,23CS106,Ananya Rao,DBMS,Present
+2026-07-24,23CS107,Vivek Kulkarni,DBMS,Absent
+2026-07-24,23CS108,Priya Nair,DBMS,Present
+2026-07-24,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-24,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-24,23CS111,Yash Agarwal,DBMS,Present
+2026-07-24,23CS112,Meera Pillai,DBMS,Present
+2026-07-24,23CS113,Nikhil Verma,DBMS,Present
+2026-07-24,23CS114,Riya Bansal,DBMS,Absent
+2026-07-24,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-24,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-24,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-07-24,23CS103,Rohan Patil,Soft Skills,Absent
+2026-07-24,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-24,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-24,23CS106,Ananya Rao,Soft Skills,Absent
+2026-07-24,23CS107,Vivek Kulkarni,Soft Skills,Absent
+2026-07-24,23CS108,Priya Nair,Soft Skills,Absent
+2026-07-24,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-24,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-24,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-24,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-24,23CS113,Nikhil Verma,Soft Skills,Absent
+2026-07-24,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-24,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-27,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-27,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-27,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-27,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-27,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-27,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-27,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-27,23CS108,Priya Nair,Agentic AI,Present
+2026-07-27,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-27,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-27,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-07-27,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-27,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-27,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-27,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-27,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-27,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-27,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-27,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-27,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-27,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-27,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-27,23CS108,Priya Nair,Machine Learning,Present
+2026-07-27,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-27,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-27,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-27,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-27,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-27,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-27,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-27,23CS101,Aarav Sharma,DBMS,Absent
+2026-07-27,23CS102,Ishika Dubey,DBMS,Present
+2026-07-27,23CS103,Rohan Patil,DBMS,Present
+2026-07-27,23CS104,Sneha Iyer,DBMS,Present
+2026-07-27,23CS105,Kabir Mehta,DBMS,Absent
+2026-07-27,23CS106,Ananya Rao,DBMS,Present
+2026-07-27,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-27,23CS108,Priya Nair,DBMS,Present
+2026-07-27,23CS109,Arjun Deshmukh,DBMS,Absent
+2026-07-27,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-27,23CS111,Yash Agarwal,DBMS,Absent
+2026-07-27,23CS112,Meera Pillai,DBMS,Present
+2026-07-27,23CS113,Nikhil Verma,DBMS,Present
+2026-07-27,23CS114,Riya Bansal,DBMS,Absent
+2026-07-27,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-27,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-27,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-07-27,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-27,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-27,23CS105,Kabir Mehta,Soft Skills,Present
+2026-07-27,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-27,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-27,23CS108,Priya Nair,Soft Skills,Present
+2026-07-27,23CS109,Arjun Deshmukh,Soft Skills,Absent
+2026-07-27,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-27,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-07-27,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-27,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-27,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-27,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-07-28,23CS101,Aarav Sharma,Agentic AI,Absent
+2026-07-28,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-28,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-28,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-28,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-28,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-28,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-28,23CS108,Priya Nair,Agentic AI,Present
+2026-07-28,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-28,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-28,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-07-28,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-28,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-28,23CS114,Riya Bansal,Agentic AI,Present
+2026-07-28,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-28,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-28,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-28,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-28,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-28,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-28,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-28,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-28,23CS108,Priya Nair,Machine Learning,Present
+2026-07-28,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-07-28,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-28,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-28,23CS112,Meera Pillai,Machine Learning,Present
+2026-07-28,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-28,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-28,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-28,23CS101,Aarav Sharma,DBMS,Present
+2026-07-28,23CS102,Ishika Dubey,DBMS,Absent
+2026-07-28,23CS103,Rohan Patil,DBMS,Present
+2026-07-28,23CS104,Sneha Iyer,DBMS,Present
+2026-07-28,23CS105,Kabir Mehta,DBMS,Absent
+2026-07-28,23CS106,Ananya Rao,DBMS,Present
+2026-07-28,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-28,23CS108,Priya Nair,DBMS,Absent
+2026-07-28,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-28,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-28,23CS111,Yash Agarwal,DBMS,Present
+2026-07-28,23CS112,Meera Pillai,DBMS,Present
+2026-07-28,23CS113,Nikhil Verma,DBMS,Present
+2026-07-28,23CS114,Riya Bansal,DBMS,Present
+2026-07-28,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-28,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-28,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-28,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-28,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-07-28,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-28,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-28,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-28,23CS108,Priya Nair,Computer Networks,Present
+2026-07-28,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-28,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-28,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-07-28,23CS112,Meera Pillai,Computer Networks,Absent
+2026-07-28,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-28,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-28,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-28,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-28,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-28,23CS103,Rohan Patil,Soft Skills,Absent
+2026-07-28,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-28,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-07-28,23CS106,Ananya Rao,Soft Skills,Absent
+2026-07-28,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-28,23CS108,Priya Nair,Soft Skills,Present
+2026-07-28,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-28,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-28,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-07-28,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-28,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-28,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-28,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-29,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-29,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-29,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-29,23CS104,Sneha Iyer,Agentic AI,Present
+2026-07-29,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-29,23CS106,Ananya Rao,Agentic AI,Absent
+2026-07-29,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-29,23CS108,Priya Nair,Agentic AI,Present
+2026-07-29,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-29,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-29,23CS111,Yash Agarwal,Agentic AI,Present
+2026-07-29,23CS112,Meera Pillai,Agentic AI,Absent
+2026-07-29,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-29,23CS114,Riya Bansal,Agentic AI,Present
+2026-07-29,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-29,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-07-29,23CS102,Ishika Dubey,Machine Learning,Present
+2026-07-29,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-29,23CS104,Sneha Iyer,Machine Learning,Present
+2026-07-29,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-29,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-29,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-07-29,23CS108,Priya Nair,Machine Learning,Present
+2026-07-29,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-07-29,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-29,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-29,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-29,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-29,23CS114,Riya Bansal,Machine Learning,Absent
+2026-07-29,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-29,23CS101,Aarav Sharma,DBMS,Present
+2026-07-29,23CS102,Ishika Dubey,DBMS,Absent
+2026-07-29,23CS103,Rohan Patil,DBMS,Present
+2026-07-29,23CS104,Sneha Iyer,DBMS,Present
+2026-07-29,23CS105,Kabir Mehta,DBMS,Present
+2026-07-29,23CS106,Ananya Rao,DBMS,Present
+2026-07-29,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-29,23CS108,Priya Nair,DBMS,Present
+2026-07-29,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-29,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-29,23CS111,Yash Agarwal,DBMS,Present
+2026-07-29,23CS112,Meera Pillai,DBMS,Present
+2026-07-29,23CS113,Nikhil Verma,DBMS,Present
+2026-07-29,23CS114,Riya Bansal,DBMS,Absent
+2026-07-29,23CS115,Omkar Jadhav,DBMS,Absent
+2026-07-29,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-29,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-29,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-29,23CS104,Sneha Iyer,Computer Networks,Present
+2026-07-29,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-29,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-29,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-29,23CS108,Priya Nair,Computer Networks,Present
+2026-07-29,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-29,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-29,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-29,23CS112,Meera Pillai,Computer Networks,Absent
+2026-07-29,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-29,23CS114,Riya Bansal,Computer Networks,Absent
+2026-07-29,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-29,23CS101,Aarav Sharma,Soft Skills,Present
+2026-07-29,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-29,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-29,23CS104,Sneha Iyer,Soft Skills,Present
+2026-07-29,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-07-29,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-29,23CS107,Vivek Kulkarni,Soft Skills,Absent
+2026-07-29,23CS108,Priya Nair,Soft Skills,Present
+2026-07-29,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-29,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-29,23CS111,Yash Agarwal,Soft Skills,Present
+2026-07-29,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-29,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-29,23CS114,Riya Bansal,Soft Skills,Absent
+2026-07-29,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-07-30,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-30,23CS102,Ishika Dubey,Agentic AI,Present
+2026-07-30,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-30,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-30,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-30,23CS106,Ananya Rao,Agentic AI,Absent
+2026-07-30,23CS107,Vivek Kulkarni,Agentic AI,Absent
+2026-07-30,23CS108,Priya Nair,Agentic AI,Present
+2026-07-30,23CS109,Arjun Deshmukh,Agentic AI,Absent
+2026-07-30,23CS110,Tanvi Joshi,Agentic AI,Absent
+2026-07-30,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-07-30,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-30,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-30,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-30,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-30,23CS101,Aarav Sharma,DBMS,Present
+2026-07-30,23CS102,Ishika Dubey,DBMS,Present
+2026-07-30,23CS103,Rohan Patil,DBMS,Present
+2026-07-30,23CS104,Sneha Iyer,DBMS,Present
+2026-07-30,23CS105,Kabir Mehta,DBMS,Present
+2026-07-30,23CS106,Ananya Rao,DBMS,Present
+2026-07-30,23CS107,Vivek Kulkarni,DBMS,Present
+2026-07-30,23CS108,Priya Nair,DBMS,Present
+2026-07-30,23CS109,Arjun Deshmukh,DBMS,Absent
+2026-07-30,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-30,23CS111,Yash Agarwal,DBMS,Present
+2026-07-30,23CS112,Meera Pillai,DBMS,Absent
+2026-07-30,23CS113,Nikhil Verma,DBMS,Present
+2026-07-30,23CS114,Riya Bansal,DBMS,Absent
+2026-07-30,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-30,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-07-30,23CS102,Ishika Dubey,Computer Networks,Absent
+2026-07-30,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-30,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-07-30,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-30,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-30,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-07-30,23CS108,Priya Nair,Computer Networks,Present
+2026-07-30,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-30,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-30,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-30,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-30,23CS113,Nikhil Verma,Computer Networks,Present
+2026-07-30,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-30,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-31,23CS101,Aarav Sharma,Agentic AI,Present
+2026-07-31,23CS102,Ishika Dubey,Agentic AI,Absent
+2026-07-31,23CS103,Rohan Patil,Agentic AI,Present
+2026-07-31,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-07-31,23CS105,Kabir Mehta,Agentic AI,Present
+2026-07-31,23CS106,Ananya Rao,Agentic AI,Present
+2026-07-31,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-07-31,23CS108,Priya Nair,Agentic AI,Present
+2026-07-31,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-07-31,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-07-31,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-07-31,23CS112,Meera Pillai,Agentic AI,Present
+2026-07-31,23CS113,Nikhil Verma,Agentic AI,Present
+2026-07-31,23CS114,Riya Bansal,Agentic AI,Absent
+2026-07-31,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-07-31,23CS101,Aarav Sharma,Machine Learning,Present
+2026-07-31,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-07-31,23CS103,Rohan Patil,Machine Learning,Present
+2026-07-31,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-07-31,23CS105,Kabir Mehta,Machine Learning,Present
+2026-07-31,23CS106,Ananya Rao,Machine Learning,Present
+2026-07-31,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-07-31,23CS108,Priya Nair,Machine Learning,Present
+2026-07-31,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-07-31,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-07-31,23CS111,Yash Agarwal,Machine Learning,Present
+2026-07-31,23CS112,Meera Pillai,Machine Learning,Absent
+2026-07-31,23CS113,Nikhil Verma,Machine Learning,Present
+2026-07-31,23CS114,Riya Bansal,Machine Learning,Present
+2026-07-31,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-07-31,23CS101,Aarav Sharma,DBMS,Present
+2026-07-31,23CS102,Ishika Dubey,DBMS,Present
+2026-07-31,23CS103,Rohan Patil,DBMS,Present
+2026-07-31,23CS104,Sneha Iyer,DBMS,Present
+2026-07-31,23CS105,Kabir Mehta,DBMS,Absent
+2026-07-31,23CS106,Ananya Rao,DBMS,Present
+2026-07-31,23CS107,Vivek Kulkarni,DBMS,Absent
+2026-07-31,23CS108,Priya Nair,DBMS,Present
+2026-07-31,23CS109,Arjun Deshmukh,DBMS,Present
+2026-07-31,23CS110,Tanvi Joshi,DBMS,Present
+2026-07-31,23CS111,Yash Agarwal,DBMS,Present
+2026-07-31,23CS112,Meera Pillai,DBMS,Absent
+2026-07-31,23CS113,Nikhil Verma,DBMS,Present
+2026-07-31,23CS114,Riya Bansal,DBMS,Absent
+2026-07-31,23CS115,Omkar Jadhav,DBMS,Present
+2026-07-31,23CS101,Aarav Sharma,Computer Networks,Present
+2026-07-31,23CS102,Ishika Dubey,Computer Networks,Present
+2026-07-31,23CS103,Rohan Patil,Computer Networks,Present
+2026-07-31,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-07-31,23CS105,Kabir Mehta,Computer Networks,Present
+2026-07-31,23CS106,Ananya Rao,Computer Networks,Present
+2026-07-31,23CS107,Vivek Kulkarni,Computer Networks,Absent
+2026-07-31,23CS108,Priya Nair,Computer Networks,Present
+2026-07-31,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-07-31,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-07-31,23CS111,Yash Agarwal,Computer Networks,Present
+2026-07-31,23CS112,Meera Pillai,Computer Networks,Present
+2026-07-31,23CS113,Nikhil Verma,Computer Networks,Absent
+2026-07-31,23CS114,Riya Bansal,Computer Networks,Present
+2026-07-31,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-07-31,23CS101,Aarav Sharma,Soft Skills,Absent
+2026-07-31,23CS102,Ishika Dubey,Soft Skills,Present
+2026-07-31,23CS103,Rohan Patil,Soft Skills,Present
+2026-07-31,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-07-31,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-07-31,23CS106,Ananya Rao,Soft Skills,Present
+2026-07-31,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-07-31,23CS108,Priya Nair,Soft Skills,Present
+2026-07-31,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-07-31,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-07-31,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-07-31,23CS112,Meera Pillai,Soft Skills,Present
+2026-07-31,23CS113,Nikhil Verma,Soft Skills,Present
+2026-07-31,23CS114,Riya Bansal,Soft Skills,Present
+2026-07-31,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-08-03,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-03,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-03,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-03,23CS104,Sneha Iyer,Agentic AI,Present
+2026-08-03,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-03,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-03,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-03,23CS108,Priya Nair,Agentic AI,Present
+2026-08-03,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-03,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-03,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-08-03,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-03,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-03,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-03,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-03,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-03,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-08-03,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-03,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-03,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-03,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-03,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-08-03,23CS108,Priya Nair,Machine Learning,Absent
+2026-08-03,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-03,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-03,23CS111,Yash Agarwal,Machine Learning,Present
+2026-08-03,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-03,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-03,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-03,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-03,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-03,23CS102,Ishika Dubey,Computer Networks,Absent
+2026-08-03,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-03,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-08-03,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-03,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-03,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-03,23CS108,Priya Nair,Computer Networks,Present
+2026-08-03,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-03,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-03,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-03,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-03,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-03,23CS114,Riya Bansal,Computer Networks,Absent
+2026-08-03,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-04,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-04,23CS102,Ishika Dubey,Agentic AI,Absent
+2026-08-04,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-04,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-08-04,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-04,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-04,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-04,23CS108,Priya Nair,Agentic AI,Present
+2026-08-04,23CS109,Arjun Deshmukh,Agentic AI,Absent
+2026-08-04,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-04,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-04,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-04,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-04,23CS114,Riya Bansal,Agentic AI,Absent
+2026-08-04,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-04,23CS101,Aarav Sharma,DBMS,Present
+2026-08-04,23CS102,Ishika Dubey,DBMS,Present
+2026-08-04,23CS103,Rohan Patil,DBMS,Present
+2026-08-04,23CS104,Sneha Iyer,DBMS,Present
+2026-08-04,23CS105,Kabir Mehta,DBMS,Absent
+2026-08-04,23CS106,Ananya Rao,DBMS,Present
+2026-08-04,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-04,23CS108,Priya Nair,DBMS,Present
+2026-08-04,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-04,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-04,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-04,23CS112,Meera Pillai,DBMS,Absent
+2026-08-04,23CS113,Nikhil Verma,DBMS,Present
+2026-08-04,23CS114,Riya Bansal,DBMS,Present
+2026-08-04,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-04,23CS101,Aarav Sharma,Soft Skills,Absent
+2026-08-04,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-08-04,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-04,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-04,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-08-04,23CS106,Ananya Rao,Soft Skills,Absent
+2026-08-04,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-04,23CS108,Priya Nair,Soft Skills,Present
+2026-08-04,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-04,23CS110,Tanvi Joshi,Soft Skills,Absent
+2026-08-04,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-04,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-04,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-04,23CS114,Riya Bansal,Soft Skills,Absent
+2026-08-04,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-08-05,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-05,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-05,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-05,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-05,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-05,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-05,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-08-05,23CS108,Priya Nair,Machine Learning,Present
+2026-08-05,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-05,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-05,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-05,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-05,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-05,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-05,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-05,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-08-05,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-05,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-05,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-08-05,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-05,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-05,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-05,23CS108,Priya Nair,Computer Networks,Present
+2026-08-05,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-05,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-05,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-08-05,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-05,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-05,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-05,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-05,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-05,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-05,23CS103,Rohan Patil,Soft Skills,Absent
+2026-08-05,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-05,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-05,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-05,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-05,23CS108,Priya Nair,Soft Skills,Present
+2026-08-05,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-05,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-05,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-08-05,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-05,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-05,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-05,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-06,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-06,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-06,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-06,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-06,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-06,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-06,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-06,23CS108,Priya Nair,Machine Learning,Present
+2026-08-06,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-06,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-06,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-06,23CS112,Meera Pillai,Machine Learning,Absent
+2026-08-06,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-06,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-06,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-06,23CS101,Aarav Sharma,DBMS,Present
+2026-08-06,23CS102,Ishika Dubey,DBMS,Absent
+2026-08-06,23CS103,Rohan Patil,DBMS,Present
+2026-08-06,23CS104,Sneha Iyer,DBMS,Absent
+2026-08-06,23CS105,Kabir Mehta,DBMS,Absent
+2026-08-06,23CS106,Ananya Rao,DBMS,Present
+2026-08-06,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-06,23CS108,Priya Nair,DBMS,Present
+2026-08-06,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-06,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-06,23CS111,Yash Agarwal,DBMS,Present
+2026-08-06,23CS112,Meera Pillai,DBMS,Present
+2026-08-06,23CS113,Nikhil Verma,DBMS,Present
+2026-08-06,23CS114,Riya Bansal,DBMS,Present
+2026-08-06,23CS115,Omkar Jadhav,DBMS,Absent
+2026-08-06,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-06,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-06,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-06,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-06,23CS105,Kabir Mehta,Computer Networks,Absent
+2026-08-06,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-06,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-06,23CS108,Priya Nair,Computer Networks,Present
+2026-08-06,23CS109,Arjun Deshmukh,Computer Networks,Absent
+2026-08-06,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-06,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-06,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-06,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-06,23CS114,Riya Bansal,Computer Networks,Absent
+2026-08-06,23CS115,Omkar Jadhav,Computer Networks,Absent
+2026-08-06,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-06,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-06,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-06,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-06,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-08-06,23CS106,Ananya Rao,Soft Skills,Absent
+2026-08-06,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-06,23CS108,Priya Nair,Soft Skills,Present
+2026-08-06,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-06,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-06,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-08-06,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-06,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-06,23CS114,Riya Bansal,Soft Skills,Absent
+2026-08-06,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-08-07,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-07,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-07,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-07,23CS104,Sneha Iyer,Agentic AI,Present
+2026-08-07,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-07,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-07,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-07,23CS108,Priya Nair,Agentic AI,Present
+2026-08-07,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-07,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-07,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-08-07,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-07,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-07,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-07,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-07,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-07,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-08-07,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-07,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-07,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-07,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-07,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-07,23CS108,Priya Nair,Machine Learning,Absent
+2026-08-07,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-08-07,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-07,23CS111,Yash Agarwal,Machine Learning,Present
+2026-08-07,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-07,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-07,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-07,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-07,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-07,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-07,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-07,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-07,23CS105,Kabir Mehta,Computer Networks,Absent
+2026-08-07,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-07,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-07,23CS108,Priya Nair,Computer Networks,Present
+2026-08-07,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-07,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-07,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-07,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-07,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-07,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-07,23CS115,Omkar Jadhav,Computer Networks,Absent
+2026-08-10,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-10,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-10,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-10,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-10,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-10,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-10,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-10,23CS108,Priya Nair,Machine Learning,Absent
+2026-08-10,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-08-10,23CS110,Tanvi Joshi,Machine Learning,Absent
+2026-08-10,23CS111,Yash Agarwal,Machine Learning,Present
+2026-08-10,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-10,23CS113,Nikhil Verma,Machine Learning,Absent
+2026-08-10,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-10,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-10,23CS101,Aarav Sharma,DBMS,Absent
+2026-08-10,23CS102,Ishika Dubey,DBMS,Present
+2026-08-10,23CS103,Rohan Patil,DBMS,Present
+2026-08-10,23CS104,Sneha Iyer,DBMS,Present
+2026-08-10,23CS105,Kabir Mehta,DBMS,Present
+2026-08-10,23CS106,Ananya Rao,DBMS,Present
+2026-08-10,23CS107,Vivek Kulkarni,DBMS,Absent
+2026-08-10,23CS108,Priya Nair,DBMS,Present
+2026-08-10,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-10,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-10,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-10,23CS112,Meera Pillai,DBMS,Present
+2026-08-10,23CS113,Nikhil Verma,DBMS,Present
+2026-08-10,23CS114,Riya Bansal,DBMS,Present
+2026-08-10,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-10,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-08-10,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-10,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-10,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-10,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-10,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-10,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-10,23CS108,Priya Nair,Computer Networks,Present
+2026-08-10,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-10,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-10,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-08-10,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-10,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-10,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-10,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-10,23CS101,Aarav Sharma,Soft Skills,Absent
+2026-08-10,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-10,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-10,23CS104,Sneha Iyer,Soft Skills,Present
+2026-08-10,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-08-10,23CS106,Ananya Rao,Soft Skills,Absent
+2026-08-10,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-10,23CS108,Priya Nair,Soft Skills,Present
+2026-08-10,23CS109,Arjun Deshmukh,Soft Skills,Absent
+2026-08-10,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-10,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-08-10,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-10,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-10,23CS114,Riya Bansal,Soft Skills,Absent
+2026-08-10,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-11,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-11,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-11,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-11,23CS104,Sneha Iyer,Agentic AI,Present
+2026-08-11,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-11,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-11,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-11,23CS108,Priya Nair,Agentic AI,Present
+2026-08-11,23CS109,Arjun Deshmukh,Agentic AI,Absent
+2026-08-11,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-11,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-08-11,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-11,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-11,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-11,23CS115,Omkar Jadhav,Agentic AI,Absent
+2026-08-11,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-11,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-11,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-11,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-11,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-11,23CS106,Ananya Rao,Machine Learning,Absent
+2026-08-11,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-11,23CS108,Priya Nair,Machine Learning,Present
+2026-08-11,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-11,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-11,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-11,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-11,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-11,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-11,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-11,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-11,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-11,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-11,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-11,23CS105,Kabir Mehta,Computer Networks,Absent
+2026-08-11,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-11,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-11,23CS108,Priya Nair,Computer Networks,Present
+2026-08-11,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-11,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-11,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-11,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-11,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-11,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-11,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-11,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-11,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-11,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-11,23CS104,Sneha Iyer,Soft Skills,Present
+2026-08-11,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-08-11,23CS106,Ananya Rao,Soft Skills,Absent
+2026-08-11,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-11,23CS108,Priya Nair,Soft Skills,Present
+2026-08-11,23CS109,Arjun Deshmukh,Soft Skills,Absent
+2026-08-11,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-11,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-11,23CS112,Meera Pillai,Soft Skills,Absent
+2026-08-11,23CS113,Nikhil Verma,Soft Skills,Absent
+2026-08-11,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-11,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-12,23CS101,Aarav Sharma,Agentic AI,Absent
+2026-08-12,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-12,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-12,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-08-12,23CS105,Kabir Mehta,Agentic AI,Absent
+2026-08-12,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-12,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-12,23CS108,Priya Nair,Agentic AI,Absent
+2026-08-12,23CS109,Arjun Deshmukh,Agentic AI,Absent
+2026-08-12,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-12,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-12,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-12,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-12,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-12,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-12,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-12,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-12,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-12,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-12,23CS105,Kabir Mehta,Machine Learning,Absent
+2026-08-12,23CS106,Ananya Rao,Machine Learning,Absent
+2026-08-12,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-12,23CS108,Priya Nair,Machine Learning,Present
+2026-08-12,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-08-12,23CS110,Tanvi Joshi,Machine Learning,Absent
+2026-08-12,23CS111,Yash Agarwal,Machine Learning,Present
+2026-08-12,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-12,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-12,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-12,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-12,23CS101,Aarav Sharma,DBMS,Absent
+2026-08-12,23CS102,Ishika Dubey,DBMS,Present
+2026-08-12,23CS103,Rohan Patil,DBMS,Present
+2026-08-12,23CS104,Sneha Iyer,DBMS,Present
+2026-08-12,23CS105,Kabir Mehta,DBMS,Present
+2026-08-12,23CS106,Ananya Rao,DBMS,Absent
+2026-08-12,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-12,23CS108,Priya Nair,DBMS,Present
+2026-08-12,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-12,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-12,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-12,23CS112,Meera Pillai,DBMS,Absent
+2026-08-12,23CS113,Nikhil Verma,DBMS,Present
+2026-08-12,23CS114,Riya Bansal,DBMS,Present
+2026-08-12,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-12,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-12,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-12,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-12,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-12,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-12,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-12,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-12,23CS108,Priya Nair,Computer Networks,Present
+2026-08-12,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-12,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-12,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-08-12,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-12,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-12,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-12,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-12,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-12,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-12,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-12,23CS104,Sneha Iyer,Soft Skills,Present
+2026-08-12,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-12,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-12,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-12,23CS108,Priya Nair,Soft Skills,Present
+2026-08-12,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-12,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-12,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-12,23CS112,Meera Pillai,Soft Skills,Absent
+2026-08-12,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-12,23CS114,Riya Bansal,Soft Skills,Absent
+2026-08-12,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-13,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-13,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-13,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-13,23CS104,Sneha Iyer,Agentic AI,Present
+2026-08-13,23CS105,Kabir Mehta,Agentic AI,Absent
+2026-08-13,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-13,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-13,23CS108,Priya Nair,Agentic AI,Present
+2026-08-13,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-13,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-13,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-13,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-13,23CS113,Nikhil Verma,Agentic AI,Absent
+2026-08-13,23CS114,Riya Bansal,Agentic AI,Absent
+2026-08-13,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-13,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-13,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-13,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-13,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-13,23CS105,Kabir Mehta,Machine Learning,Absent
+2026-08-13,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-13,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-13,23CS108,Priya Nair,Machine Learning,Present
+2026-08-13,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-13,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-13,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-13,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-13,23CS113,Nikhil Verma,Machine Learning,Absent
+2026-08-13,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-13,23CS115,Omkar Jadhav,Machine Learning,Absent
+2026-08-13,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-13,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-13,23CS103,Rohan Patil,Computer Networks,Absent
+2026-08-13,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-13,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-13,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-13,23CS107,Vivek Kulkarni,Computer Networks,Absent
+2026-08-13,23CS108,Priya Nair,Computer Networks,Present
+2026-08-13,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-13,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-13,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-13,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-13,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-13,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-13,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-13,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-13,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-08-13,23CS103,Rohan Patil,Soft Skills,Absent
+2026-08-13,23CS104,Sneha Iyer,Soft Skills,Present
+2026-08-13,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-13,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-13,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-13,23CS108,Priya Nair,Soft Skills,Present
+2026-08-13,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-13,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-13,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-13,23CS112,Meera Pillai,Soft Skills,Absent
+2026-08-13,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-13,23CS114,Riya Bansal,Soft Skills,Absent
+2026-08-13,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-08-14,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-14,23CS102,Ishika Dubey,Agentic AI,Absent
+2026-08-14,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-14,23CS104,Sneha Iyer,Agentic AI,Present
+2026-08-14,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-14,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-14,23CS107,Vivek Kulkarni,Agentic AI,Absent
+2026-08-14,23CS108,Priya Nair,Agentic AI,Present
+2026-08-14,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-14,23CS110,Tanvi Joshi,Agentic AI,Absent
+2026-08-14,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-14,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-14,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-14,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-14,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-14,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-14,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-08-14,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-14,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-14,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-14,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-14,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-14,23CS108,Priya Nair,Machine Learning,Present
+2026-08-14,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-14,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-14,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-14,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-14,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-14,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-14,23CS115,Omkar Jadhav,Machine Learning,Absent
+2026-08-14,23CS101,Aarav Sharma,DBMS,Present
+2026-08-14,23CS102,Ishika Dubey,DBMS,Present
+2026-08-14,23CS103,Rohan Patil,DBMS,Present
+2026-08-14,23CS104,Sneha Iyer,DBMS,Present
+2026-08-14,23CS105,Kabir Mehta,DBMS,Absent
+2026-08-14,23CS106,Ananya Rao,DBMS,Present
+2026-08-14,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-14,23CS108,Priya Nair,DBMS,Present
+2026-08-14,23CS109,Arjun Deshmukh,DBMS,Absent
+2026-08-14,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-14,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-14,23CS112,Meera Pillai,DBMS,Absent
+2026-08-14,23CS113,Nikhil Verma,DBMS,Absent
+2026-08-14,23CS114,Riya Bansal,DBMS,Present
+2026-08-14,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-14,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-14,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-14,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-14,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-14,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-14,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-14,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-14,23CS108,Priya Nair,Computer Networks,Absent
+2026-08-14,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-14,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-14,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-14,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-14,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-14,23CS114,Riya Bansal,Computer Networks,Absent
+2026-08-14,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-14,23CS101,Aarav Sharma,Soft Skills,Absent
+2026-08-14,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-14,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-14,23CS104,Sneha Iyer,Soft Skills,Present
+2026-08-14,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-14,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-14,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-14,23CS108,Priya Nair,Soft Skills,Present
+2026-08-14,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-14,23CS110,Tanvi Joshi,Soft Skills,Absent
+2026-08-14,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-08-14,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-14,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-14,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-14,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-08-17,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-17,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-17,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-17,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-17,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-17,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-17,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-17,23CS108,Priya Nair,Machine Learning,Present
+2026-08-17,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-17,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-17,23CS111,Yash Agarwal,Machine Learning,Present
+2026-08-17,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-17,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-17,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-17,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-17,23CS101,Aarav Sharma,DBMS,Present
+2026-08-17,23CS102,Ishika Dubey,DBMS,Present
+2026-08-17,23CS103,Rohan Patil,DBMS,Present
+2026-08-17,23CS104,Sneha Iyer,DBMS,Absent
+2026-08-17,23CS105,Kabir Mehta,DBMS,Present
+2026-08-17,23CS106,Ananya Rao,DBMS,Absent
+2026-08-17,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-17,23CS108,Priya Nair,DBMS,Present
+2026-08-17,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-17,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-17,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-17,23CS112,Meera Pillai,DBMS,Absent
+2026-08-17,23CS113,Nikhil Verma,DBMS,Present
+2026-08-17,23CS114,Riya Bansal,DBMS,Absent
+2026-08-17,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-17,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-17,23CS102,Ishika Dubey,Computer Networks,Absent
+2026-08-17,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-17,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-08-17,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-17,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-17,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-17,23CS108,Priya Nair,Computer Networks,Present
+2026-08-17,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-17,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-17,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-17,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-17,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-17,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-17,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-17,23CS101,Aarav Sharma,Soft Skills,Absent
+2026-08-17,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-17,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-17,23CS104,Sneha Iyer,Soft Skills,Present
+2026-08-17,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-17,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-17,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-17,23CS108,Priya Nair,Soft Skills,Present
+2026-08-17,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-17,23CS110,Tanvi Joshi,Soft Skills,Absent
+2026-08-17,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-17,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-17,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-17,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-17,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-18,23CS101,Aarav Sharma,Agentic AI,Absent
+2026-08-18,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-18,23CS103,Rohan Patil,Agentic AI,Absent
+2026-08-18,23CS104,Sneha Iyer,Agentic AI,Present
+2026-08-18,23CS105,Kabir Mehta,Agentic AI,Absent
+2026-08-18,23CS106,Ananya Rao,Agentic AI,Absent
+2026-08-18,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-18,23CS108,Priya Nair,Agentic AI,Absent
+2026-08-18,23CS109,Arjun Deshmukh,Agentic AI,Absent
+2026-08-18,23CS110,Tanvi Joshi,Agentic AI,Absent
+2026-08-18,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-18,23CS112,Meera Pillai,Agentic AI,Absent
+2026-08-18,23CS113,Nikhil Verma,Agentic AI,Absent
+2026-08-18,23CS114,Riya Bansal,Agentic AI,Absent
+2026-08-18,23CS115,Omkar Jadhav,Agentic AI,Absent
+2026-08-18,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-08-18,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-08-18,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-18,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-18,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-18,23CS106,Ananya Rao,Machine Learning,Absent
+2026-08-18,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-18,23CS108,Priya Nair,Machine Learning,Absent
+2026-08-18,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-08-18,23CS110,Tanvi Joshi,Machine Learning,Absent
+2026-08-18,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-18,23CS112,Meera Pillai,Machine Learning,Absent
+2026-08-18,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-18,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-18,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-18,23CS101,Aarav Sharma,DBMS,Absent
+2026-08-18,23CS102,Ishika Dubey,DBMS,Present
+2026-08-18,23CS103,Rohan Patil,DBMS,Absent
+2026-08-18,23CS104,Sneha Iyer,DBMS,Absent
+2026-08-18,23CS105,Kabir Mehta,DBMS,Absent
+2026-08-18,23CS106,Ananya Rao,DBMS,Absent
+2026-08-18,23CS107,Vivek Kulkarni,DBMS,Absent
+2026-08-18,23CS108,Priya Nair,DBMS,Absent
+2026-08-18,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-18,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-18,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-18,23CS112,Meera Pillai,DBMS,Absent
+2026-08-18,23CS113,Nikhil Verma,DBMS,Absent
+2026-08-18,23CS114,Riya Bansal,DBMS,Present
+2026-08-18,23CS115,Omkar Jadhav,DBMS,Absent
+2026-08-18,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-08-18,23CS102,Ishika Dubey,Computer Networks,Absent
+2026-08-18,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-18,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-08-18,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-18,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-18,23CS107,Vivek Kulkarni,Computer Networks,Absent
+2026-08-18,23CS108,Priya Nair,Computer Networks,Present
+2026-08-18,23CS109,Arjun Deshmukh,Computer Networks,Absent
+2026-08-18,23CS110,Tanvi Joshi,Computer Networks,Absent
+2026-08-18,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-08-18,23CS112,Meera Pillai,Computer Networks,Absent
+2026-08-18,23CS113,Nikhil Verma,Computer Networks,Absent
+2026-08-18,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-18,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-19,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-19,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-19,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-19,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-08-19,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-19,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-19,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-19,23CS108,Priya Nair,Agentic AI,Present
+2026-08-19,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-19,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-19,23CS111,Yash Agarwal,Agentic AI,Absent
+2026-08-19,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-19,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-19,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-19,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-19,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-19,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-19,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-19,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-19,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-19,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-19,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-19,23CS108,Priya Nair,Machine Learning,Present
+2026-08-19,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-19,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-19,23CS111,Yash Agarwal,Machine Learning,Present
+2026-08-19,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-19,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-19,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-19,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-19,23CS101,Aarav Sharma,DBMS,Absent
+2026-08-19,23CS102,Ishika Dubey,DBMS,Present
+2026-08-19,23CS103,Rohan Patil,DBMS,Present
+2026-08-19,23CS104,Sneha Iyer,DBMS,Absent
+2026-08-19,23CS105,Kabir Mehta,DBMS,Present
+2026-08-19,23CS106,Ananya Rao,DBMS,Present
+2026-08-19,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-19,23CS108,Priya Nair,DBMS,Present
+2026-08-19,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-19,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-19,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-19,23CS112,Meera Pillai,DBMS,Present
+2026-08-19,23CS113,Nikhil Verma,DBMS,Present
+2026-08-19,23CS114,Riya Bansal,DBMS,Absent
+2026-08-19,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-19,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-08-19,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-19,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-19,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-08-19,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-19,23CS106,Ananya Rao,Computer Networks,Absent
+2026-08-19,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-19,23CS108,Priya Nair,Computer Networks,Present
+2026-08-19,23CS109,Arjun Deshmukh,Computer Networks,Absent
+2026-08-19,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-19,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-19,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-19,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-19,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-19,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-19,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-19,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-08-19,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-19,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-19,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-08-19,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-19,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-19,23CS108,Priya Nair,Soft Skills,Absent
+2026-08-19,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-19,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-19,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-19,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-19,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-19,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-19,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-20,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-08-20,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-20,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-20,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-20,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-20,23CS106,Ananya Rao,Machine Learning,Absent
+2026-08-20,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-20,23CS108,Priya Nair,Machine Learning,Present
+2026-08-20,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-08-20,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-20,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-20,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-20,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-20,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-20,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-20,23CS101,Aarav Sharma,DBMS,Absent
+2026-08-20,23CS102,Ishika Dubey,DBMS,Present
+2026-08-20,23CS103,Rohan Patil,DBMS,Present
+2026-08-20,23CS104,Sneha Iyer,DBMS,Absent
+2026-08-20,23CS105,Kabir Mehta,DBMS,Absent
+2026-08-20,23CS106,Ananya Rao,DBMS,Present
+2026-08-20,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-20,23CS108,Priya Nair,DBMS,Present
+2026-08-20,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-20,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-20,23CS111,Yash Agarwal,DBMS,Present
+2026-08-20,23CS112,Meera Pillai,DBMS,Present
+2026-08-20,23CS113,Nikhil Verma,DBMS,Present
+2026-08-20,23CS114,Riya Bansal,DBMS,Present
+2026-08-20,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-20,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-20,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-20,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-20,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-20,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-20,23CS106,Ananya Rao,Computer Networks,Absent
+2026-08-20,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-20,23CS108,Priya Nair,Computer Networks,Present
+2026-08-20,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-20,23CS110,Tanvi Joshi,Computer Networks,Absent
+2026-08-20,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-08-20,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-20,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-20,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-20,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-20,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-20,23CS102,Ishika Dubey,Soft Skills,Absent
+2026-08-20,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-20,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-20,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-08-20,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-20,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-20,23CS108,Priya Nair,Soft Skills,Present
+2026-08-20,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-20,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-20,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-08-20,23CS112,Meera Pillai,Soft Skills,Absent
+2026-08-20,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-20,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-20,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-21,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-21,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-21,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-21,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-08-21,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-21,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-21,23CS107,Vivek Kulkarni,Agentic AI,Absent
+2026-08-21,23CS108,Priya Nair,Agentic AI,Present
+2026-08-21,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-21,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-21,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-21,23CS112,Meera Pillai,Agentic AI,Absent
+2026-08-21,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-21,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-21,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-21,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-08-21,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-21,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-21,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-21,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-21,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-21,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-21,23CS108,Priya Nair,Machine Learning,Present
+2026-08-21,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-21,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-21,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-21,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-21,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-21,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-21,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-21,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-21,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-21,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-21,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-08-21,23CS105,Kabir Mehta,Computer Networks,Absent
+2026-08-21,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-21,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-21,23CS108,Priya Nair,Computer Networks,Present
+2026-08-21,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-21,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-21,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-21,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-21,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-21,23CS114,Riya Bansal,Computer Networks,Absent
+2026-08-21,23CS115,Omkar Jadhav,Computer Networks,Absent
+2026-08-21,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-21,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-21,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-21,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-21,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-21,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-21,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-21,23CS108,Priya Nair,Soft Skills,Present
+2026-08-21,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-21,23CS110,Tanvi Joshi,Soft Skills,Absent
+2026-08-21,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-08-21,23CS112,Meera Pillai,Soft Skills,Absent
+2026-08-21,23CS113,Nikhil Verma,Soft Skills,Absent
+2026-08-21,23CS114,Riya Bansal,Soft Skills,Absent
+2026-08-21,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-24,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-24,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-24,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-24,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-24,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-24,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-24,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-24,23CS108,Priya Nair,Machine Learning,Present
+2026-08-24,23CS109,Arjun Deshmukh,Machine Learning,Absent
+2026-08-24,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-24,23CS111,Yash Agarwal,Machine Learning,Present
+2026-08-24,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-24,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-24,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-24,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-24,23CS101,Aarav Sharma,DBMS,Present
+2026-08-24,23CS102,Ishika Dubey,DBMS,Present
+2026-08-24,23CS103,Rohan Patil,DBMS,Present
+2026-08-24,23CS104,Sneha Iyer,DBMS,Present
+2026-08-24,23CS105,Kabir Mehta,DBMS,Present
+2026-08-24,23CS106,Ananya Rao,DBMS,Present
+2026-08-24,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-24,23CS108,Priya Nair,DBMS,Present
+2026-08-24,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-24,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-24,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-24,23CS112,Meera Pillai,DBMS,Present
+2026-08-24,23CS113,Nikhil Verma,DBMS,Present
+2026-08-24,23CS114,Riya Bansal,DBMS,Present
+2026-08-24,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-24,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-24,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-24,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-24,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-24,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-24,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-24,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-24,23CS108,Priya Nair,Computer Networks,Present
+2026-08-24,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-24,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-24,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-08-24,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-24,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-24,23CS114,Riya Bansal,Computer Networks,Absent
+2026-08-24,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-24,23CS101,Aarav Sharma,Soft Skills,Absent
+2026-08-24,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-24,23CS103,Rohan Patil,Soft Skills,Absent
+2026-08-24,23CS104,Sneha Iyer,Soft Skills,Present
+2026-08-24,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-24,23CS106,Ananya Rao,Soft Skills,Absent
+2026-08-24,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-24,23CS108,Priya Nair,Soft Skills,Present
+2026-08-24,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-24,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-24,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-24,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-24,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-24,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-24,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-25,23CS101,Aarav Sharma,Agentic AI,Absent
+2026-08-25,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-25,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-25,23CS104,Sneha Iyer,Agentic AI,Present
+2026-08-25,23CS105,Kabir Mehta,Agentic AI,Absent
+2026-08-25,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-25,23CS107,Vivek Kulkarni,Agentic AI,Absent
+2026-08-25,23CS108,Priya Nair,Agentic AI,Present
+2026-08-25,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-25,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-25,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-25,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-25,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-25,23CS114,Riya Bansal,Agentic AI,Absent
+2026-08-25,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-25,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-08-25,23CS102,Ishika Dubey,Machine Learning,Absent
+2026-08-25,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-25,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-25,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-25,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-25,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-25,23CS108,Priya Nair,Machine Learning,Present
+2026-08-25,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-25,23CS110,Tanvi Joshi,Machine Learning,Absent
+2026-08-25,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-25,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-25,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-25,23CS114,Riya Bansal,Machine Learning,Present
+2026-08-25,23CS115,Omkar Jadhav,Machine Learning,Absent
+2026-08-25,23CS101,Aarav Sharma,DBMS,Present
+2026-08-25,23CS102,Ishika Dubey,DBMS,Present
+2026-08-25,23CS103,Rohan Patil,DBMS,Present
+2026-08-25,23CS104,Sneha Iyer,DBMS,Absent
+2026-08-25,23CS105,Kabir Mehta,DBMS,Present
+2026-08-25,23CS106,Ananya Rao,DBMS,Present
+2026-08-25,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-25,23CS108,Priya Nair,DBMS,Present
+2026-08-25,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-25,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-25,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-25,23CS112,Meera Pillai,DBMS,Present
+2026-08-25,23CS113,Nikhil Verma,DBMS,Present
+2026-08-25,23CS114,Riya Bansal,DBMS,Absent
+2026-08-25,23CS115,Omkar Jadhav,DBMS,Absent
+2026-08-25,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-25,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-25,23CS103,Rohan Patil,Soft Skills,Absent
+2026-08-25,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-25,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-25,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-25,23CS107,Vivek Kulkarni,Soft Skills,Absent
+2026-08-25,23CS108,Priya Nair,Soft Skills,Present
+2026-08-25,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-25,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-25,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-25,23CS112,Meera Pillai,Soft Skills,Absent
+2026-08-25,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-25,23CS114,Riya Bansal,Soft Skills,Absent
+2026-08-25,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-26,23CS101,Aarav Sharma,Agentic AI,Present
+2026-08-26,23CS102,Ishika Dubey,Agentic AI,Absent
+2026-08-26,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-26,23CS104,Sneha Iyer,Agentic AI,Present
+2026-08-26,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-26,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-26,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-26,23CS108,Priya Nair,Agentic AI,Present
+2026-08-26,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-26,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-26,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-26,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-26,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-26,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-26,23CS115,Omkar Jadhav,Agentic AI,Present
+2026-08-26,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-26,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-26,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-26,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-26,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-26,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-26,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-26,23CS108,Priya Nair,Machine Learning,Present
+2026-08-26,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-26,23CS110,Tanvi Joshi,Machine Learning,Absent
+2026-08-26,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-26,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-26,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-26,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-26,23CS115,Omkar Jadhav,Machine Learning,Absent
+2026-08-26,23CS101,Aarav Sharma,DBMS,Absent
+2026-08-26,23CS102,Ishika Dubey,DBMS,Present
+2026-08-26,23CS103,Rohan Patil,DBMS,Present
+2026-08-26,23CS104,Sneha Iyer,DBMS,Present
+2026-08-26,23CS105,Kabir Mehta,DBMS,Absent
+2026-08-26,23CS106,Ananya Rao,DBMS,Absent
+2026-08-26,23CS107,Vivek Kulkarni,DBMS,Absent
+2026-08-26,23CS108,Priya Nair,DBMS,Present
+2026-08-26,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-26,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-26,23CS111,Yash Agarwal,DBMS,Absent
+2026-08-26,23CS112,Meera Pillai,DBMS,Present
+2026-08-26,23CS113,Nikhil Verma,DBMS,Present
+2026-08-26,23CS114,Riya Bansal,DBMS,Present
+2026-08-26,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-26,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-26,23CS102,Ishika Dubey,Computer Networks,Present
+2026-08-26,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-26,23CS104,Sneha Iyer,Computer Networks,Absent
+2026-08-26,23CS105,Kabir Mehta,Computer Networks,Present
+2026-08-26,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-26,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-26,23CS108,Priya Nair,Computer Networks,Present
+2026-08-26,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-26,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-26,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-26,23CS112,Meera Pillai,Computer Networks,Absent
+2026-08-26,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-26,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-26,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-26,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-26,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-26,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-26,23CS104,Sneha Iyer,Soft Skills,Present
+2026-08-26,23CS105,Kabir Mehta,Soft Skills,Absent
+2026-08-26,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-26,23CS107,Vivek Kulkarni,Soft Skills,Absent
+2026-08-26,23CS108,Priya Nair,Soft Skills,Present
+2026-08-26,23CS109,Arjun Deshmukh,Soft Skills,Absent
+2026-08-26,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-26,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-26,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-26,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-26,23CS114,Riya Bansal,Soft Skills,Absent
+2026-08-26,23CS115,Omkar Jadhav,Soft Skills,Present
+2026-08-27,23CS101,Aarav Sharma,Agentic AI,Absent
+2026-08-27,23CS102,Ishika Dubey,Agentic AI,Present
+2026-08-27,23CS103,Rohan Patil,Agentic AI,Present
+2026-08-27,23CS104,Sneha Iyer,Agentic AI,Absent
+2026-08-27,23CS105,Kabir Mehta,Agentic AI,Present
+2026-08-27,23CS106,Ananya Rao,Agentic AI,Present
+2026-08-27,23CS107,Vivek Kulkarni,Agentic AI,Present
+2026-08-27,23CS108,Priya Nair,Agentic AI,Present
+2026-08-27,23CS109,Arjun Deshmukh,Agentic AI,Present
+2026-08-27,23CS110,Tanvi Joshi,Agentic AI,Present
+2026-08-27,23CS111,Yash Agarwal,Agentic AI,Present
+2026-08-27,23CS112,Meera Pillai,Agentic AI,Present
+2026-08-27,23CS113,Nikhil Verma,Agentic AI,Present
+2026-08-27,23CS114,Riya Bansal,Agentic AI,Present
+2026-08-27,23CS115,Omkar Jadhav,Agentic AI,Absent
+2026-08-27,23CS101,Aarav Sharma,Machine Learning,Present
+2026-08-27,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-27,23CS103,Rohan Patil,Machine Learning,Absent
+2026-08-27,23CS104,Sneha Iyer,Machine Learning,Present
+2026-08-27,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-27,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-27,23CS107,Vivek Kulkarni,Machine Learning,Absent
+2026-08-27,23CS108,Priya Nair,Machine Learning,Present
+2026-08-27,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-27,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-27,23CS111,Yash Agarwal,Machine Learning,Absent
+2026-08-27,23CS112,Meera Pillai,Machine Learning,Absent
+2026-08-27,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-27,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-27,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-27,23CS101,Aarav Sharma,DBMS,Absent
+2026-08-27,23CS102,Ishika Dubey,DBMS,Present
+2026-08-27,23CS103,Rohan Patil,DBMS,Present
+2026-08-27,23CS104,Sneha Iyer,DBMS,Absent
+2026-08-27,23CS105,Kabir Mehta,DBMS,Present
+2026-08-27,23CS106,Ananya Rao,DBMS,Present
+2026-08-27,23CS107,Vivek Kulkarni,DBMS,Present
+2026-08-27,23CS108,Priya Nair,DBMS,Present
+2026-08-27,23CS109,Arjun Deshmukh,DBMS,Present
+2026-08-27,23CS110,Tanvi Joshi,DBMS,Present
+2026-08-27,23CS111,Yash Agarwal,DBMS,Present
+2026-08-27,23CS112,Meera Pillai,DBMS,Present
+2026-08-27,23CS113,Nikhil Verma,DBMS,Present
+2026-08-27,23CS114,Riya Bansal,DBMS,Present
+2026-08-27,23CS115,Omkar Jadhav,DBMS,Present
+2026-08-27,23CS101,Aarav Sharma,Computer Networks,Present
+2026-08-27,23CS102,Ishika Dubey,Computer Networks,Absent
+2026-08-27,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-27,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-27,23CS105,Kabir Mehta,Computer Networks,Absent
+2026-08-27,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-27,23CS107,Vivek Kulkarni,Computer Networks,Present
+2026-08-27,23CS108,Priya Nair,Computer Networks,Present
+2026-08-27,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-27,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-27,23CS111,Yash Agarwal,Computer Networks,Present
+2026-08-27,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-27,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-27,23CS114,Riya Bansal,Computer Networks,Present
+2026-08-27,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-27,23CS101,Aarav Sharma,Soft Skills,Absent
+2026-08-27,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-27,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-27,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-27,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-27,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-27,23CS107,Vivek Kulkarni,Soft Skills,Absent
+2026-08-27,23CS108,Priya Nair,Soft Skills,Present
+2026-08-27,23CS109,Arjun Deshmukh,Soft Skills,Present
+2026-08-27,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-27,23CS111,Yash Agarwal,Soft Skills,Absent
+2026-08-27,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-27,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-27,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-27,23CS115,Omkar Jadhav,Soft Skills,Absent
+2026-08-28,23CS101,Aarav Sharma,Machine Learning,Absent
+2026-08-28,23CS102,Ishika Dubey,Machine Learning,Present
+2026-08-28,23CS103,Rohan Patil,Machine Learning,Present
+2026-08-28,23CS104,Sneha Iyer,Machine Learning,Absent
+2026-08-28,23CS105,Kabir Mehta,Machine Learning,Present
+2026-08-28,23CS106,Ananya Rao,Machine Learning,Present
+2026-08-28,23CS107,Vivek Kulkarni,Machine Learning,Present
+2026-08-28,23CS108,Priya Nair,Machine Learning,Present
+2026-08-28,23CS109,Arjun Deshmukh,Machine Learning,Present
+2026-08-28,23CS110,Tanvi Joshi,Machine Learning,Present
+2026-08-28,23CS111,Yash Agarwal,Machine Learning,Present
+2026-08-28,23CS112,Meera Pillai,Machine Learning,Present
+2026-08-28,23CS113,Nikhil Verma,Machine Learning,Present
+2026-08-28,23CS114,Riya Bansal,Machine Learning,Absent
+2026-08-28,23CS115,Omkar Jadhav,Machine Learning,Present
+2026-08-28,23CS101,Aarav Sharma,Computer Networks,Absent
+2026-08-28,23CS102,Ishika Dubey,Computer Networks,Absent
+2026-08-28,23CS103,Rohan Patil,Computer Networks,Present
+2026-08-28,23CS104,Sneha Iyer,Computer Networks,Present
+2026-08-28,23CS105,Kabir Mehta,Computer Networks,Absent
+2026-08-28,23CS106,Ananya Rao,Computer Networks,Present
+2026-08-28,23CS107,Vivek Kulkarni,Computer Networks,Absent
+2026-08-28,23CS108,Priya Nair,Computer Networks,Present
+2026-08-28,23CS109,Arjun Deshmukh,Computer Networks,Present
+2026-08-28,23CS110,Tanvi Joshi,Computer Networks,Present
+2026-08-28,23CS111,Yash Agarwal,Computer Networks,Absent
+2026-08-28,23CS112,Meera Pillai,Computer Networks,Present
+2026-08-28,23CS113,Nikhil Verma,Computer Networks,Present
+2026-08-28,23CS114,Riya Bansal,Computer Networks,Absent
+2026-08-28,23CS115,Omkar Jadhav,Computer Networks,Present
+2026-08-28,23CS101,Aarav Sharma,Soft Skills,Present
+2026-08-28,23CS102,Ishika Dubey,Soft Skills,Present
+2026-08-28,23CS103,Rohan Patil,Soft Skills,Present
+2026-08-28,23CS104,Sneha Iyer,Soft Skills,Absent
+2026-08-28,23CS105,Kabir Mehta,Soft Skills,Present
+2026-08-28,23CS106,Ananya Rao,Soft Skills,Present
+2026-08-28,23CS107,Vivek Kulkarni,Soft Skills,Present
+2026-08-28,23CS108,Priya Nair,Soft Skills,Absent
+2026-08-28,23CS109,Arjun Deshmukh,Soft Skills,Absent
+2026-08-28,23CS110,Tanvi Joshi,Soft Skills,Present
+2026-08-28,23CS111,Yash Agarwal,Soft Skills,Present
+2026-08-28,23CS112,Meera Pillai,Soft Skills,Present
+2026-08-28,23CS113,Nikhil Verma,Soft Skills,Present
+2026-08-28,23CS114,Riya Bansal,Soft Skills,Present
+2026-08-28,23CS115,Omkar Jadhav,Soft Skills,Present
