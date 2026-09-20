@@ -1,6 +1,6 @@
 <div align="center">
 
-# AttendX
+# AttendX: Automated Attendance Report Generator
 
 **An attendance ERP where an AI agent decides which of its eleven tools to run — and shows you its working.**
 
