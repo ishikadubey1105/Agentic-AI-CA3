@@ -33,6 +33,10 @@ Thumbs.db
 desktop.ini
 .DS_Store
 
+# --- always keep these ---------------------------------------------------
+!docs/
+!docs/*.png
+
 # --- keep the vendored browser libraries --------------------------------
 # frontend/vendor/*.js is committed on purpose: it is what lets the app run
 # with no internet. Do not add it here.
