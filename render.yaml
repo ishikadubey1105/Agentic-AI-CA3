@@ -1,0 +1,15 @@
+# Render blueprint - https://render.com
+# Free web service: one long running process, writable disk, no build step.
+services:
+  - type: web
+    name: attendx
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python backend.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      # optional: set it here to drive the agents with an LLM in production
+      - key: GROQ_API_KEY
+        sync: false

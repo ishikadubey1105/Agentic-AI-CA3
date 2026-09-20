@@ -1,0 +1,6 @@
+data/
+outputs/
+.git/
+__pycache__/
+tests/__pycache__/
+*.db

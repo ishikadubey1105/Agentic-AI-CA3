@@ -2126,6 +2126,10 @@ app = gr.mount_gradio_app(app, gradio_console(), path="/agent")
 
 
 if __name__ == "__main__":
-    print("\n  AttendX running on http://127.0.0.1:8000")
+    # a hosting provider hands the port in $PORT and needs 0.0.0.0;
+    # on a laptop it stays on localhost
+    port = int(os.environ.get("PORT", 8000))
+    host = os.environ.get("HOST", "0.0.0.0" if os.environ.get("PORT") else "127.0.0.1")
+    print(f"\n  AttendX running on http://{host}:{port}")
     print("  logins:  ishika / teach123     hod / admin123\n")
-    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="warning")
+    uvicorn.run(app, host=host, port=port, log_level="warning")
