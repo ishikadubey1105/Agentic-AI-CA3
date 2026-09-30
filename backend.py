@@ -1,4 +1,4 @@
-"""
+﻿"""
 AttendX - Attendance ERP with an AI agent
 Agentic AI and Automation, Unit Test 3
 
@@ -144,93 +144,86 @@ def audit(actor, agent, action, params="", outcome=""):
 #  First run: create the tables and fill them with a believable semester
 # ----------------------------------------------------------------------
 def seed_if_empty():
+    """Schema init + default teacher accounts only (no demo data at startup)."""
     with closing(db()) as con:
         con.executescript(SCHEMA)
         con.commit()
         migrate(con)
-        if con.execute("SELECT COUNT(*) c FROM teachers").fetchone()["c"]:
-            ensure_student_logins(con)
-            return
-
-        print("[setup] empty database, seeding demo data ...")
         for uname, name, role, pwd in [
                 ("ishika", "Prof. Ishika Dubey", "teacher", "teach123"),
-                ("hod", "Dr. R. Deshpande (HOD)", "hod", "admin123")]:
-            salt, ph = hash_pwd(pwd)
-            con.execute("INSERT INTO teachers (username,name,role,salt,pwd_hash,created)"
-                        " VALUES (?,?,?,?,?,?)",
-                        (uname, name, role, salt, ph,
-                         dt.datetime.now().isoformat(timespec="seconds")))
+                ("hod",    "Dr. R. Deshpande (HOD)", "hod",  "admin123")]:
+            exists = con.execute(
+                "SELECT 1 FROM teachers WHERE username=?", (uname,)).fetchone()
+            if not exists:
+                salt, ph = hash_pwd(pwd)
+                con.execute(
+                    "INSERT INTO teachers (username,name,role,salt,pwd_hash,created)"
+                    " VALUES (?,?,?,?,?,?)",
+                    (uname, name, role, salt, ph,
+                     dt.datetime.now().isoformat(timespec="seconds")))
+        con.commit()
+        ensure_student_logins(con)
 
+
+def has_attendance_data() -> bool:
+    """Return True when there is at least one attendance record."""
+    with closing(db()) as con:
+        return con.execute(
+            "SELECT COUNT(*) c FROM attendance").fetchone()["c"] > 0
+
+
+def seed_demo_data() -> int:
+    """Populate the DB with a realistic demo semester (called on demand via API)."""
+    with closing(db()) as con:
         names = ["Aarav Sharma", "Ishika Dubey", "Rohan Patil", "Sneha Iyer",
                  "Kabir Mehta", "Ananya Rao", "Vivek Kulkarni", "Priya Nair",
                  "Arjun Deshmukh", "Tanvi Joshi", "Yash Agarwal", "Meera Pillai",
                  "Nikhil Verma", "Riya Bansal", "Omkar Jadhav"]
         for i, n in enumerate(names):
-            roll = f"23CS{101 + i}"
-            con.execute("INSERT INTO students (roll,name,email) VALUES (?,?,?)",
+            roll = "23CS" + str(101 + i)
+            con.execute("INSERT OR IGNORE INTO students (roll,name,email) VALUES (?,?,?)",
                         (roll, n, roll.lower() + "@sitnagpur.siu.edu.in"))
-
-        subjects = [("CS301", "Agentic AI", 1), ("CS302", "Machine Learning", 1),
-                    ("CS303", "DBMS", 2), ("CS304", "Computer Networks", 2),
-                    ("HS301", "Soft Skills", 2)]
+        subjects = [("CS301","Agentic AI",1),("CS302","Machine Learning",1),
+                    ("CS303","DBMS",2),("CS304","Computer Networks",2),
+                    ("HS301","Soft Skills",2)]
         for code, sname, tid in subjects:
-            con.execute("INSERT INTO subjects (code,name,teacher_id) VALUES (?,?,?)",
+            con.execute("INSERT OR IGNORE INTO subjects (code,name,teacher_id) VALUES (?,?,?)",
                         (code, sname, tid))
         con.commit()
-
-        # --- generate two months of attendance -------------------------
+        import random
         random.seed(7)
         students = con.execute("SELECT id, name FROM students").fetchall()
-        subs = con.execute("SELECT id, name FROM subjects").fetchall()
-
-        habit = {s["id"]: random.uniform(0.80, 0.99) for s in students}
+        subs     = con.execute("SELECT id, name FROM subjects").fetchall()
+        habit  = {s["id"]: random.uniform(0.80, 0.99) for s in students}
         for sid in random.sample([s["id"] for s in students], 3):
-            habit[sid] = random.uniform(0.52, 0.70)          # chronic defaulters
+            habit[sid] = random.uniform(0.52, 0.70)
         sliding = random.sample([s["id"] for s in students if habit[s["id"]] > 0.85], 2)
-
         day, end = dt.date(2026, 7, 1), dt.date(2026, 8, 30)
         span = (end - day).days
         rows = []
         while day <= end:
             if day.weekday() < 5:
-                progress = (day - dt.date(2026, 7, 1)).days / span
-                mass_bunk = random.random() < 0.04
+                progress   = (day - dt.date(2026, 7, 1)).days / span
+                mass_bunk  = random.random() < 0.04
                 for sub in subs:
                     if random.random() < 0.15:
                         continue
                     for s in students:
                         p = habit[s["id"]]
-                        if sub["name"] == "Soft Skills":
-                            p *= 0.88
-                        if s["id"] in sliding:
-                            p *= (1 - 0.30 * progress)
-                        if mass_bunk:
-                            p *= 0.35
+                        if sub["name"] == "Soft Skills": p *= 0.88
+                        if s["id"] in sliding:          p *= (1 - 0.30 * progress)
+                        if mass_bunk:                   p *= 0.35
                         rows.append((day.isoformat(), sub["id"], s["id"],
                                      1 if random.random() < p else 0, 1,
                                      day.isoformat() + "T10:00:00"))
             day += dt.timedelta(days=1)
-
         con.executemany("INSERT OR IGNORE INTO attendance "
                         "(date,subject_id,student_id,present,marked_by,marked_at)"
                         " VALUES (?,?,?,?,?,?)", rows)
         con.commit()
-
-        # a couple of approved medical leaves so the exemption feature has
-        # something real to show on day one
-        low = con.execute("SELECT student_id, AVG(present) p FROM attendance "
-                          "GROUP BY student_id ORDER BY p LIMIT 2").fetchall()
-        for r in low:
-            con.execute("INSERT INTO exemptions (student_id,subject_id,from_date,"
-                        "to_date,reason,kind,approved_by,created) "
-                        "VALUES (?,?,?,?,?,?,?,?)",
-                        (r["student_id"], None, "2026-08-03", "2026-08-07",
-                         "Hospitalised - certificate submitted", "medical", 2,
-                         dt.datetime.now().isoformat(timespec="seconds")))
-        con.commit()
         ensure_student_logins(con)
-        print(f"[setup] seeded {len(rows)} attendance records")
+        print("[setup] seeded", len(rows), "attendance records")
+        return len(rows)
 
 
 def ensure_student_logins(con):
@@ -297,6 +290,9 @@ def current_user(authorization: str = Header(default="")):
 # ======================================================================
 class DataAgent:
     name = "DataAgent"
+
+    def invalidate(self):
+        pass
 
     # a class covered by an approved exemption is removed from the
     # denominator entirely - the record stays, it just stops counting
@@ -1690,6 +1686,130 @@ def api_logout(user=Depends(current_user), authorization: str = Header(default="
     audit(user["username"], "Auth", "logout")
     return {"ok": True}
 
+@app.get("/api/has-data")
+def api_has_data(user=Depends(current_user)):
+    """Returns whether any attendance records exist (used by the frontend
+    to decide whether to show the data-source chooser after login)."""
+    return {"has_data": has_attendance_data()}
+
+
+@app.post("/api/reset-data")
+def api_reset_data(user=Depends(current_user)):
+    """Clears all attendance, exemptions, letters, students and subjects
+    so the user can choose CSV upload or demo data afresh."""
+    with closing(db()) as con:
+        con.execute("DELETE FROM attendance")
+        con.execute("DELETE FROM exemptions")
+        con.execute("DELETE FROM letters")
+        con.execute("DELETE FROM students")
+        con.execute("DELETE FROM subjects")
+        con.commit()
+    DATA.invalidate()
+    audit(user["username"], "Setup", "reset_data", "", "Reset all attendance data")
+    return {"ok": True}
+
+
+@app.post("/api/seed-demo")
+def api_seed_demo(user=Depends(current_user)):
+    """Load the built-in demo semester into the database."""
+    with closing(db()) as con:
+        con.execute("DELETE FROM attendance")
+        con.execute("DELETE FROM exemptions")
+        con.execute("DELETE FROM letters")
+        con.execute("DELETE FROM students")
+        con.execute("DELETE FROM subjects")
+        con.commit()
+    n = seed_demo_data()
+    audit(user["username"], "Setup", "seed_demo", "", f"{n} records seeded")
+    DATA.invalidate()
+    return {"ok": True, "records": n}
+
+
+@app.post("/api/import-csv")
+async def api_import_csv(file: UploadFile = File(...), user=Depends(current_user)):
+    """Import attendance from a CSV.
+    Supports flexible columns: Date, RollNo/Roll, Name, Subject/Course, Status/Present.
+    Clears previous data so the new CSV becomes the active dataset."""
+    try:
+        raw = await file.read()
+        df = pd.read_csv(io.BytesIO(raw))
+        
+        # Normalize column names
+        alias = {
+            "date": "date", "day": "date", "timestamp": "date",
+            "roll": "roll", "rollno": "roll", "roll_no": "roll", "prn": "roll", "id": "roll", "student_id": "roll",
+            "name": "name", "studentname": "name", "student_name": "name",
+            "subject": "subject", "course": "subject", "sub": "subject", "subject_name": "subject",
+            "status": "present", "present": "present", "attendance": "present", "is_present": "present"
+        }
+        ren = {}
+        for c in df.columns:
+            clean = re.sub(r"[^a-z0-9]", "", str(c).lower())
+            if clean in alias:
+                ren[c] = alias[clean]
+        df = df.rename(columns=ren)
+
+        required = {"roll", "subject", "date", "present"}
+        missing = required - set(df.columns)
+        if missing:
+            raise HTTPException(422,
+                f"CSV is missing columns: {sorted(missing)}. "
+                "Required: Roll (or RollNo), Subject, Date, Present (or Status). Optionally: Name.")
+
+        parsed_date = pd.to_datetime(df["date"], errors="coerce")
+        if parsed_date.isna().mean() > 0.3:
+            parsed_date = pd.to_datetime(df["date"], errors="coerce", dayfirst=True)
+        df["date"] = parsed_date.dt.strftime("%Y-%m-%d")
+        df = df.dropna(subset=["date"])
+
+        def map_p(val):
+            s = str(val).strip().upper()
+            if s in ("1", "P", "PRESENT", "YES", "Y", "TRUE"):
+                return 1
+            if s in ("0", "A", "ABSENT", "NO", "N", "FALSE"):
+                return 0
+            return 0
+        df["present"] = df["present"].apply(map_p)
+    except HTTPException:
+        raise
+    except Exception as exc:
+        raise HTTPException(422, f"Could not parse CSV: {exc}")
+
+    inserted = 0
+    with closing(db()) as con:
+        con.execute("DELETE FROM attendance")
+        con.execute("DELETE FROM exemptions")
+        con.execute("DELETE FROM letters")
+        con.execute("DELETE FROM students")
+        con.execute("DELETE FROM subjects")
+        con.commit()
+
+        for _, row in df.iterrows():
+            roll = str(row["roll"]).strip()
+            name = str(row.get("name", roll)).strip()
+            con.execute("INSERT OR IGNORE INTO students (roll,name,email) VALUES (?,?,?)",
+                        (roll, name, roll.lower() + "@imported.local"))
+            st = con.execute("SELECT id FROM students WHERE roll=?", (roll,)).fetchone()
+            
+            subj = str(row["subject"]).strip()
+            con.execute("INSERT OR IGNORE INTO subjects (code,name,teacher_id) VALUES (?,?,?)",
+                        (subj, subj, user["id"]))
+            sub = con.execute("SELECT id FROM subjects WHERE code=?", (subj,)).fetchone()
+            
+            date = str(row["date"]).strip()
+            cur = con.execute(
+                "INSERT OR IGNORE INTO attendance "
+                "(date,subject_id,student_id,present,marked_by,marked_at)"
+                " VALUES (?,?,?,?,?,?)",
+                (date, sub["id"], st["id"], int(row["present"]),
+                 user["id"], dt.datetime.now().isoformat(timespec="seconds")))
+            inserted += cur.rowcount
+        con.commit()
+        ensure_student_logins(con)
+    DATA.invalidate()
+    audit(user["username"], "Setup", "import_csv", file.filename, f"{inserted} rows")
+    return {"ok": True, "rows_imported": inserted}
+
 
 @app.get("/api/me")
 def api_me(user=Depends(current_user)):
@@ -2133,3 +2253,4 @@ if __name__ == "__main__":
     print(f"\n  AttendX running on http://{host}:{port}")
     print("  logins:  ishika / teach123     hod / admin123\n")
     uvicorn.run(app, host=host, port=port, log_level="warning")
+
