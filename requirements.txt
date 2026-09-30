@@ -1,0 +1,5 @@
+gradio>=4.44
+openai-agents>=0.1
+openai>=1.50
+pandas>=2.0
+python-dotenv>=1.0

@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+*.db
+*.db-shm
+*.db-wal
+generated_report.md
+.venv/
+app_output.txt
